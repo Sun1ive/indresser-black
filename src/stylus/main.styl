@@ -6,6 +6,17 @@
 
 @import '../../node_modules/vuetify/src/stylus/app'
 
+@import './settings.styl'
+
 
 .application--light .toolbar .btn:not(.btn--disabled)
   color #fff
+  font-family: 'OpenSansBold', Arial, Helvetica, sans-serif
+  font-size: 1.2rem
+
+.application > main
+  flex-direction column
+
+.toolbar__content
+  justify-content center
+  max-width 1400px

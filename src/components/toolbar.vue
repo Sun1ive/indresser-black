@@ -54,8 +54,12 @@
 </script>
 
 <style scoped lang="stylus">
+.header
+  background-color #2b2a29 + 50%
+
 .toolbar
   background-color #2b2a29
+  opacity 0.3
 
 .toolbar__items
   width 100%
