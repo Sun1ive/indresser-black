@@ -11,17 +11,18 @@
       </v-flex>
       <v-flex xs12 sm5 class="wrapper">
         <div class="box">
-          <p>Для тех, кто живет  в ритме города  и не беспокоится  по мелочам!  подробнее...</p>
+          <p>Для любительниц  что-то носить с собой,  теперь есть решение -  платье с карманами!  подробнее</p>
         </div>
       </v-flex>
       <v-flex xs12 sm5 class="wrapper">
         <div class="box">
-          <p>Для тех, кто живет  в ритме города  и не беспокоится  по мелочам!  подробнее...</p>
+          <p>Для тех, кто живет  в ритме города и не беспокоится  по мелочам!  подробнее</p>
         </div>
       </v-flex>
       <v-flex xs12 sm5 class="wrapper">
         <div class="box">
-          <p>Для тех, кто живет  в ритме города  и не беспокоится  по мелочам!  подробнее...</p>
+          <p>Для тех, кто выберает  стильные и удобные  платья в cтиле  Casual!</p>
+          <v-btn>подробнее ???</v-btn>
         </div>
       </v-flex>
     </v-layout>
@@ -47,13 +48,21 @@
     background-image url('/static/boxBg.png')
     min-height 300px
     max-width 504px
+    max-height 300px
     margin: 0 15px
     .box
-      // filter grayscale(100%)
+      filter grayscale(100%)
       min-height 300px
-      display flex
-      align-items center
-      margin-left 2.3rem
+      // display flex
+      // align-items center
+      // justify-content center
+      // flex-direction column
+      // margin-left 2.3rem
+      padding 3.5rem 0 0 2.3rem
+      transition .4s ease
+      &:hover
+        filter grayscale(0)
+        transition .4s ease
     &:nth-child(1)
       .box
         background url('/static/firstGirl.png') 90% center no-repeat
@@ -65,8 +74,9 @@
         background url('/static/thirdgirl.png') 100% center no-repeat
     &:nth-child(4)
       .box
-        background url('/static/secondgirl.png') right center no-repeat
+        background url('/static/fourthgirl.png') 101% center no-repeat
     p
-      max-width 250px
+      max-width 270px
       font-size 1.8rem
+      line-height 2.7rem
 </style>
