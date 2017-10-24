@@ -9,6 +9,7 @@ import {
   VIcon,
   VGrid,
   VToolbar,
+  VDivider,
   transitions
 } from 'vuetify';
 import VueScroll from 'vue-scrollto';
@@ -25,6 +26,7 @@ Vue.use(Vuetify, {
     VIcon,
     VGrid,
     VToolbar,
+    VDivider,
     transitions
   }
 });
