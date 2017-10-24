@@ -28,7 +28,7 @@ Vue.use(Vuetify, {
     transitions
   }
 });
-Vue.use(Scroll, {
+Vue.use(VueScroll, {
   container: 'body',
   duration: 500,
   offset: 0,
