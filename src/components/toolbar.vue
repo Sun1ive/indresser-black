@@ -3,7 +3,7 @@
     <v-navigation-drawer dark left temporary hide-overlay v-model="drawer">
       <v-list class="pa-1">
         <v-list-tile avatar class="text-xs-center">
-          <img src="/static/logo1.png">
+          <img style="width: 100%" src="/static/222.png">
         </v-list-tile>
       </v-list>
       <v-list>

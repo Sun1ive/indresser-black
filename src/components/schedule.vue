@@ -1,8 +1,8 @@
 <template>
   <v-container>
     <v-layout align-center class="layoutContainer">
-      <v-flex xs12 sm6 md8>
-        <img src="/static/schedule.png" alt="logo">
+      <v-flex xs12 sm6 md10 class="test">
+        <img srcset="/static/schedule.png 1900w, /static/1024/logofooter1024.png 1024w" alt="logo">
       </v-flex>
       <v-flex xs12 sm6 md4>
         <div class="text-xs-right">
@@ -26,17 +26,17 @@
   </v-container>
 </template>
 
-<script>
-  export default {
-    
-  }
-</script>
-
 <style scoped lang="stylus">
 .layoutContainer
   min-height 370px
   div
     margin 1rem 0
+  .test
+    position relative
+    // img
+    //   position absolute
+    //   left 0%
+    //   margin-top -3.5rem
   h3
     font-family 'OpenSansBold'
     font-size 1.3rem
@@ -47,4 +47,11 @@
     margin-bottom 0
     font-size 1.1rem
     line-height 1.3rem
+
+@media (max-width 1024px)
+  .layoutContainer
+    h3
+      font-size 1rem
+    p
+      font-size .9rem !important
 </style>
