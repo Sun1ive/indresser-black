@@ -27,7 +27,7 @@
     </v-flex> -->
       <v-flex xs12 sm5 class="wrapper" v-for="(item,i) in items" :key="i">
         <div class="box">
-          <p>{{ item }}</p>
+          <p class="text">{{ item }}</p>
           <a href="#">подробнее</a>
         </div>
       </v-flex>
@@ -87,6 +87,5 @@
         background url('/static/fourthgirl.png') 101% center no-repeat
     p
       max-width 270px
-      font-size 1.8rem
-      line-height 2.7rem
+
 </style>
