@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-layout justify-center class="paddingTop">
+    <v-layout justify-center align-center>
       <h2>Кто мы такие</h2>
     </v-layout>
     <v-layout column wrap class="layoutContainer">
@@ -15,10 +15,9 @@
 .container
   background-image url('/static/bgAbout.png')
   min-height 815px
-  .paddingTop
-    padding-top 5rem
-  .layoutContainer
-    padding-top 2rem
+  h2
+    padding 3rem 0
+    margin 0
   p
     text-indent 1.5rem
     color #8e8e8e

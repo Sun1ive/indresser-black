@@ -20,6 +20,10 @@
     <section class="aboutus">
       <app-aboutus></app-aboutus>
     </section>
+    <!-- how do we work -->
+    <section class="work">
+      <app-howdowework></app-howdowework>
+    </section>
   </main>
 </template>
 
@@ -29,6 +33,7 @@ import pains from './pains'
 import ourclothes from './ourclothes'
 import whyus from './whyus'
 import aboutus from './aboutus'
+import howdowework from './howdowework'
 
 
 export default {
@@ -38,6 +43,7 @@ export default {
     'app-ourclothes': ourclothes,
     'app-whyus': whyus,
     'app-aboutus': aboutus,
+    'app-howdowework': howdowework,
   }
 }
 </script>

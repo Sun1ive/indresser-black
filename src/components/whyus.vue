@@ -6,8 +6,8 @@
     <v-layout row wrap class="layoutContainer">
       <v-flex xs12 sm6 md4 class="box" v-for="(item, i) in items" :key="i">
         <img :src="item.icon" :alt="item.text">
-        <p class="mb-0">{{ item.text }}</p>
-        <p>{{ item.secondtext }}</p>
+        <p class="iconText mb-0">{{ item.text }}</p>
+        <p class="iconText">{{ item.secondtext }}</p>
       </v-flex>
     </v-layout>
   </v-container>
@@ -43,8 +43,5 @@
     align-items center
     justify-content center
     img
-      padding-bottom 3.6rem
-    p
-      font-size 1.8rem
-      text-align center
+      padding-bottom 3.5rem
 </style>

@@ -4,27 +4,6 @@
       <h2 class="mb-0">Кому подходит наша одежда?</h2>
     </v-layout>
     <v-layout justify-center row wrap align-center class="layoutContainer">
-    <!-- <v-flex xs12 sm5 class="wrapper">
-        <div class="box">
-          <p>Для тех, кто живет  в ритме города  и не беспокоится  по мелочам!  подробнее...</p>
-        </div>
-      </v-flex>
-      <v-flex xs12 sm5 class="wrapper">
-        <div class="box">
-          <p>Для любительниц  что-то носить с собой,  теперь есть решение -  платье с карманами!  подробнее</p>
-        </div>
-      </v-flex>
-      <v-flex xs12 sm5 class="wrapper">
-        <div class="box">
-          <p>Для тех, кто живет  в ритме города и не беспокоится  по мелочам!  подробнее</p>
-        </div>
-      </v-flex>
-      <v-flex xs12 sm5 class="wrapper">
-        <div class="box">
-          <p>Для тех, кто выберает  стильные и удобные  платья в cтиле  Casual!</p>
-          <a href="">подробнее</a>
-        </div>
-    </v-flex> -->
       <v-flex xs12 sm5 class="wrapper" v-for="(item,i) in items" :key="i">
         <div class="box">
           <p class="text">{{ item }}</p>
