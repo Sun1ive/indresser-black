@@ -14,12 +14,11 @@
   font-family: 'OpenSansBold', Arial, Helvetica, sans-serif
   font-size: 1.2rem
 
+.toolbar__content > *:not(.btn):not(.menu):first-child, .toolbar__extension > *:not(.btn):not(.menu):first-child
+  margin-left: 0
+
 .application > main
   flex-direction column
-
-.toolbar__content
-  justify-content center
-  max-width 1400px
 
 
 // helpers
@@ -36,10 +35,6 @@ h2
 
 .white
   color #fff
-
-.layoutContainer
-  max-width: 1030px
-  margin 0 auto !important
 
 .layout
   h2
@@ -58,3 +53,11 @@ h2
 
 .application .theme--dark.btn:not(.btn--disabled):not(.btn--date-picker).btn--icon, .application .theme--dark.btn:not(.btn--disabled):not(.btn--date-picker).btn--floating
   color #e4757a
+
+.layoutContainer
+  max-width: 1030px
+  margin 0 auto !important
+
+@media (max-width 1024px)
+  .layoutContainer
+    max-width: 700px

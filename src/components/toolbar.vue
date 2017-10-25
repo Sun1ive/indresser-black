@@ -26,14 +26,11 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar>
-      <v-toolbar-items class="hidden-sm-and-down">
+    <v-toolbar height="73px">
+      <v-toolbar-items class="hidden-xs-only">
         <a href="#" v-for="(item, i) in toolbarMenu" :key="i" v-scroll-to="item.scroll">{{ item.title }}</a>
       </v-toolbar-items>
-      <!-- <v-toolbar-side-icon class="hidden-sm-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon> -->
-      <div class="lowResMenu">
-        <i class="hidden-sm-and-up fa fa-bars" @click.stop="drawer = !drawer"></i>
-      </div>
+      <v-toolbar-side-icon class="white--text hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
   </header>
 </template>
@@ -70,20 +67,16 @@
 
 .toolbar__items
   width 100%
-  justify-content space-around
+  justify-content center
   align-items center
+  min-width 800px
   a
     text-decoration none
     text-transform uppercase
     color #fff
+    margin 0 2rem
 
-.lowResMenu
-  display flex
-  justify-content flex-start
-  width 100%
-  margin-left 2rem
-  i
-    font-size 2rem
-    cursor pointer
-    color #fff
+@media (max-width 960px)
+  .toolbar__items
+    display none
 </style>

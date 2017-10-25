@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-layout align-center class="banner">
-      <v-flex xs12 sm10 md8 lg6>
+      <v-flex xs12 sm12 md10 lg6 class="text-xs-center">
         <img src="/static/logobanner.png" alt="logo">
       </v-flex>
     </v-layout>
@@ -10,12 +10,6 @@
     </v-layout>
   </v-container>
 </template>
-
-<script>
-  export default {
-    
-  }
-</script>
 
 <style scoped lang="stylus">
 .container
@@ -51,4 +45,12 @@
   font-family 'OpenSans-Semibold', Arial, Helvetica, sans-serif
   color #fff
   font-size 2.4rem
+
+@media (max-width: 1800px)
+  .container
+    background-position center center
+
+@media (max-width: 1030px)
+  .container
+    background-position 90% center
 </style>
