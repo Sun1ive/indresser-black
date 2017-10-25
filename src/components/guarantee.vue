@@ -34,7 +34,4 @@
       color #8e8e8e
       margin-bottom 0
       margin-left 2rem
-  h2
-    padding 4rem 0
-    margin-bottom 0
 </style>

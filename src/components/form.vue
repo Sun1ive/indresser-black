@@ -1,0 +1,48 @@
+<template>
+  <v-container fluid>
+    <v-layout justify-center>
+      <h2 class="darkgrey">Свяжитесь с нами</h2>
+    </v-layout>
+    <v-layout justify-center align-center class="layoutContainer">
+      <form class="form" action="">
+        <div>
+          <input required class="inputtext" type="email" placeholder="Email">
+          <input required class="inputtext" type="text" placeholder="Имя">
+        </div>
+        <input required type="text" placeholder="Тема">
+        <textarea required name="" placeholder="Сообщение" cols="20" rows="8"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </v-layout>
+  </v-container>
+</template>
+
+<script>
+  export default {
+    
+  }
+</script>
+
+<style scoped lang="stylus">
+.container
+  min-height 510px
+.form
+  display flex
+  flex-flow column wrap
+  .inputtext
+    margin 0.3rem 0.1rem
+    min-width 290px
+  input
+  textarea
+    padding 0.3rem 1.2rem
+    margin 0.3rem 0
+    border 2px solid #d5d5d5
+  button
+    margin-bottom 0
+    min-height 45px
+    background-color #4b4b4b
+    text-transform uppercase
+    color #fff
+    font-size 1.3rem
+    margin-top .5rem
+</style>

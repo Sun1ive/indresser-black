@@ -1,4 +1,7 @@
 import Vue from 'vue';
+import VueScroll from 'vue-scrollto';
+import './stylus/main.styl';
+import App from './App.vue';
 import {
   Vuetify,
   VApp,
@@ -10,11 +13,9 @@ import {
   VGrid,
   VToolbar,
   VDivider,
+  VCarousel,
   transitions
 } from 'vuetify';
-import VueScroll from 'vue-scrollto';
-import './stylus/main.styl';
-import App from './App.vue';
 
 Vue.use(Vuetify, {
   components: {
@@ -27,6 +28,7 @@ Vue.use(Vuetify, {
     VGrid,
     VToolbar,
     VDivider,
+    VCarousel,
     transitions
   }
 });

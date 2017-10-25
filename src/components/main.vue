@@ -28,6 +28,14 @@
     <section class="guarantee">
       <app-guarantee></app-guarantee>
     </section>
+    <!-- reviews -->
+    <section class="reviews">
+      <app-reviews></app-reviews>
+    </section>
+    <!-- form -->
+    <section class="form">
+      <app-form></app-form>
+    </section>
   </main>
 </template>
 
@@ -39,6 +47,8 @@ import whyus from './whyus'
 import aboutus from './aboutus'
 import howdowework from './howdowework'
 import guarantee from './guarantee'
+import reviews from './reviews'
+import form from './form'
 
 
 export default {
@@ -50,6 +60,8 @@ export default {
     'app-aboutus': aboutus,
     'app-howdowework': howdowework,
     'app-guarantee': guarantee,
+    'app-reviews': reviews,
+    'app-form': form,
   }
 }
 </script>

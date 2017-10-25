@@ -46,7 +46,4 @@
         padding-bottom 3.5rem
       a
         text-decoration none
-  h2
-    margin 0
-    padding 4rem 0
 </style>

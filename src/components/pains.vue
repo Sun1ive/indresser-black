@@ -29,6 +29,8 @@
   display flex
   flex-direction column
   justify-content center
+  h2
+    padding 0 0 2rem 0
   p
     font-size 1.6rem
     color #8e8e8e
