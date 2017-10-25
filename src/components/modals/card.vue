@@ -5,9 +5,17 @@
       <p class="mb-0"></p>
       <button class="myBtn">Заказать звонок</button>
     </v-layout>
-    <v-carousel hide-controls>
-      <v-carousel-item v-for="(item, i) in gallery" :key="i" :src="item.img"></v-carousel-item>
-    </v-carousel>
+    <v-layout justify-center>
+      <h2>Топ продаж</h2>
+    </v-layout>
+    <v-layout>
+      <v-carousel hide-controls>
+        <v-carousel-item v-for="(item, i) in gallery" :key="i" :src="item.img"></v-carousel-item>
+      </v-carousel>
+    </v-layout>
+    <v-layout justify-center class="py-3">
+      <button class="myBtn">Получить весь каталог</button>
+    </v-layout>
     <div class="close" @click.stop="closeModal"></div>
   </v-container>
 </template>
@@ -33,9 +41,4 @@ export default {
 <style scoped lang="stylus">
 @import '../../components/modals/modals.styl'
 
-.carousel
-  height 700px
-
-.carousel__item
-  transition .8s linear
 </style>
