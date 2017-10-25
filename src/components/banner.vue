@@ -21,7 +21,7 @@
 .container
   background-image url('/static/bannerGirl.png')
   height 850px
-  background-position right
+  background-position 105% center
   position relative
   .banner
     min-height inherit
