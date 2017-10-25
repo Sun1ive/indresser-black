@@ -40,6 +40,10 @@
     <section class="gmap">
       <app-gmap></app-gmap>
     </section>
+    <!-- schedule -->
+    <section class="schedule">
+      <app-schedule></app-schedule>
+    </section>
   </main>
 </template>
 
@@ -54,6 +58,7 @@ import guarantee from './guarantee'
 import reviews from './reviews'
 import form from './form'
 import gmap from './gmap'
+import schedule from './schedule'
 
 
 export default {
@@ -68,6 +73,7 @@ export default {
     'app-reviews': reviews,
     'app-form': form,
     'app-gmap': gmap,
+    'app-schedule': schedule,
   }
 }
 </script>
