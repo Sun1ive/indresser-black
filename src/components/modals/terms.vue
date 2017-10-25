@@ -1,7 +1,7 @@
 <template>
   <v-container class="modal">
     <v-layout column justify-center align-center>
-      <h2 class="mb-0">{{ currentItem.title }}</h2>
+      <h2 class="h3Modal mb-0">{{ currentItem.title }}</h2>
       <p class="mb-0">{{ currentItem.desc }}</p>
     </v-layout>
     <div class="close" @click.stop="closeModal"></div>
