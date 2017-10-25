@@ -12,6 +12,10 @@
     <section class="clothes">
       <app-ourclothes></app-ourclothes>       
     </section>
+    <!-- why us -->
+    <section class="whyus">
+      <app-whyus></app-whyus>
+    </section>
   </main>
 </template>
 
@@ -19,6 +23,7 @@
 import banner from './banner'
 import pains from './pains'
 import ourclothes from './ourclothes'
+import whyus from './whyus'
 
 
 export default {
@@ -26,6 +31,7 @@ export default {
     'app-banner': banner,
     'app-pains': pains,
     'app-ourclothes': ourclothes,
+    'app-whyus': whyus,
   }
 }
 </script>
