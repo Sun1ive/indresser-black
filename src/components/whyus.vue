@@ -17,6 +17,7 @@
   export default {
     data () {
       return {
+        isActive: false,
         items: [
           { icon: '/static/tag.png', text: `Экслюзивная`, secondtext: `дизайнерская одежда` },
           { icon: '/static/truck.png', text: `Бесплатная`, secondtext: ` доставка по Украине` },

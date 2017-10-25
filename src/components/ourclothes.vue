@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container class="clothesBG" fluid>
     <v-layout class="head" justify-center align-center>
       <h2 class="mb-0">Кому подходит наша одежда?</h2>
     </v-layout>
@@ -7,25 +7,47 @@
       <v-flex xs12 sm5 class="wrapper" v-for="(item,i) in items" :key="i">
         <div class="box">
           <p class="text">{{ item }}</p>
-          <a href="#">подробнее</a>
+          <a href="#" @click.stop.prevent="showModal(item)">подробнее</a>
         </div>
       </v-flex>
     </v-layout>
+    <v-dialog ref="dialog" persistent max-width="65vh" v-model="isActive">
+      <app-card :currentItem="currentItem" @closeModal="closeModal"></app-card>
+    </v-dialog>
   </v-container>
 </template>
 
 <script>
+import card from './modals/card'
   export default {
+    components: {
+      'app-card': card
+    },
     data () {
       return {
+        isActive: false,
+        currentItem: '',
         items: [`Для тех, кто живет  в ритме города  и не беспокоится  по мелочам!`, `Для любительниц  что-то носить с собой,  теперь есть решение -  платье с карманами!`, `Для тех, кто живет  в ритме города и не беспокоится  по мелочам! `, `Для тех, кто выберает  стильные и удобные  платья в cтиле  Casual!` ]
       }
+    },
+    methods: {
+      showModal (item) {
+        this.currentItem = item
+        this.isActive = true
+      },
+      closeModal () {
+        this.isActive = false
+      }
+    },
+    mounted () {
+       let dialog = this.$refs.dialog.$refs.dialog;
+       dialog.style.minWidth = '500px';
     }
   }
 </script>
 
 <style scoped lang="stylus">
-.container
+.clothesBG
   background url('/static/cardbg.png') center center no-repeat
   height 830px
   margin-left -2px
