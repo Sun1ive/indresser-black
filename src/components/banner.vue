@@ -13,9 +13,9 @@
 
 <style scoped lang="stylus">
 .container
-  background-image url('/static/bannerGirl.png')
+  background-image url('/static/test1.png')
   height 850px
-  background-position 105% center
+  background-position right center
   position relative
   .banner
     min-height inherit
@@ -46,11 +46,5 @@
   color #fff
   font-size 2.4rem
 
-@media (max-width: 1800px)
-  .container
-    background-position center center
 
-@media (max-width: 1030px)
-  .container
-    background-position 90% center
 </style>

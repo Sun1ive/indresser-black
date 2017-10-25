@@ -1,7 +1,5 @@
 <template>
-  <v-container fluid>
-    <img src="/static/location-pin.png" alt="location">
-  </v-container>
+  <v-container fluid></v-container>
 </template>
 
 <style scoped lang="stylus">

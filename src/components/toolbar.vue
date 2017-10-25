@@ -1,6 +1,6 @@
 <template>
  <header class="header">
-    <v-navigation-drawer left temporary hide-overlay v-model="drawer">
+    <v-navigation-drawer dark left temporary hide-overlay v-model="drawer">
       <v-list class="pa-1">
         <v-list-tile avatar class="text-xs-center">
           <img src="/static/logo1.png">
@@ -26,7 +26,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar height="73px">
+    <v-toolbar ref="toolbar" height="73px">
       <v-toolbar-items class="hidden-xs-only">
         <a href="#" v-for="(item, i) in toolbarMenu" :key="i" v-scroll-to="item.scroll">{{ item.title }}</a>
       </v-toolbar-items>
@@ -49,6 +49,23 @@
           { title: 'Контакты', icon: 'star', scroll: '.header' },
         ]
       }
+    },
+    methods: {
+      fixed () {
+        let offset = window.pageYOffset;
+        let toolbar = document.querySelector('.toolbar');
+        if (offset >= 250 && !toolbar.classList.contains('fixed')) {
+          toolbar.classList.add('fixed');
+        } else if ( offset <= 250 && toolbar.classList.contains('fixed')) {
+          toolbar.classList.remove('fixed');
+        }
+      }
+    },
+    created () {
+      window.addEventListener('scroll', this.fixed)
+    },
+    beforeDestroy () {
+      window.removeEventListener('scroll', this.fixed)
     }
   }
 </script>
@@ -59,11 +76,26 @@
 
 .toolbar
   background-color #2b2a29
-  opacity 0.3
+  position static
+
+.fixed
+  position fixed
+  top 0
+  opacity .4
+  animation fade 2s
   transition .4s ease
   &:hover
     transition .4s ease
     opacity  1
+
+@keyframes fade {
+  from {
+    opacity 0
+  } to {
+    opacity .4
+  }
+}
+
 
 .toolbar__items
   width 100%
