@@ -18,4 +18,8 @@
   p
     text-indent 1.5rem
     color #8e8e8e
+
+@media (max-width 1024px)
+  .container
+    min-height 550px
 </style>

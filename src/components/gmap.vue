@@ -6,5 +6,5 @@
 .container
   background-image url('/static/gmap1.png')
   min-height 620px
-  position relative
+  background-size cover
 </style>

@@ -34,4 +34,11 @@
       color #8e8e8e
       margin-bottom 0
       margin-left 2rem
+
+@media (max-width 1024px)
+  .container
+    min-height 270px
+
+  .box
+    margin 1rem !important
 </style>

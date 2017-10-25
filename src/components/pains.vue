@@ -30,10 +30,15 @@
   flex-direction column
   justify-content center
   h2
-    padding 0 0 2rem 0
+    padding 0 0 2rem 0 !important
   p
     font-size 1.6rem
     color #8e8e8e
     line-height 1.2
     margin-bottom 0
+  
+@media (max-width: 1024px)
+  .container
+    p
+      font-size 1.2rem
 </style>

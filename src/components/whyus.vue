@@ -3,8 +3,8 @@
     <v-layout justify-center>
       <h2>Почему именно мы?</h2>
     </v-layout>
-    <v-layout row wrap class="layoutContainer">
-      <v-flex xs12 sm6 md4 class="box" v-for="(item, i) in items" :key="i">
+    <v-layout row wrap justify-center align-center class="layoutContainer">
+      <v-flex xs12 sm4 md4 class="box" v-for="(item, i) in items" :key="i">
         <img :src="item.icon" :alt="item.text">
         <p class="iconText mb-0">{{ item.text }}</p>
         <p class="iconText">{{ item.secondtext }}</p>

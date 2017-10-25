@@ -4,7 +4,7 @@
       <h2 class="darkgrey">Как мы работаем?</h2>
     </v-layout>
     <v-layout class="layoutContainer" wrap row justify-center align-center>
-      <v-flex xs12 sm6 md4 lg3 v-for="(item, i) in items" :key="i">
+      <v-flex xs12 sm4 md4 lg3 v-for="(item, i) in items" :key="i">
         <img :src="item.icon" :alt="item.title">
         <p class="mb-0 iconText">{{ item.title }}</p>
         <a href="#">{{ item.button }}</a>
@@ -46,4 +46,12 @@
         padding-bottom 3.5rem
       a
         text-decoration none
+
+@media (max-width 1024px)
+  .flex
+    margin 0 !important
+    &:last-child
+      margin-top 3rem !important
+  .container
+    min-height 530px
 </style>

@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-layout justify-center align-center>
+    <v-layout class="head" justify-center align-center>
       <h2 class="mb-0">Кому подходит наша одежда?</h2>
     </v-layout>
     <v-layout justify-center row wrap align-center class="layoutContainer">
@@ -32,7 +32,9 @@
   display flex
   justify-content center
   align-items center
-  flex-flow column wrap
+  flex-flow column nowrap
+  .head
+    max-height 15%
   .wrapper
     background-image url('/static/boxBg.png')
     min-height 300px
@@ -42,11 +44,6 @@
     .box
       filter grayscale(100%)
       min-height 300px
-      // display flex
-      // align-items center
-      // justify-content center
-      // flex-direction column
-      // margin-left 2.3rem
       padding 3rem 0 0 2.2rem
       transition .4s ease
       &:hover
@@ -67,4 +64,26 @@
     p
       max-width 270px
 
+@media (max-width 1024px)
+  .container
+    height 540px
+    background-image url('/static/1024/cardbg1024.png')
+    .wrapper
+      max-width 328px
+      min-height 195px
+      max-height 200px
+      .box
+        min-height 195px
+      &:nth-child(1)
+        .box
+          background url('/static/1024/girlone.png') 90% -5% no-repeat
+      &:nth-child(2)
+        .box
+          background url('/static/1024/girltwo.png') 103% -5% no-repeat
+      &:nth-child(3)
+        .box
+          background url('/static/1024/girlthree.png') 100% -5% no-repeat
+      &:nth-child(4)
+        .box
+          background url('/static/1024/girlfour.png') 101% -5% no-repeat
 </style>

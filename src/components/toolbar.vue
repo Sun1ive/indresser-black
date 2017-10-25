@@ -82,7 +82,7 @@
   position fixed
   top 0
   opacity .4
-  animation fade 2s
+  animation fade 1.3s ease
   transition .4s ease
   &:hover
     transition .4s ease
