@@ -16,7 +16,7 @@
   background-image url('/static/bgAbout.png')
   min-height 815px
   h2
-    padding 3rem 0
+    padding 4rem 0
     margin 0
   p
     text-indent 1.5rem

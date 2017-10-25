@@ -34,7 +34,6 @@
   background-image url('/static/bgwork.png')
   .layoutContainer
     margin 0 auto !important
-    padding-top 2rem
     .flex
       display flex
       justify-content center
@@ -49,5 +48,5 @@
         text-decoration none
   h2
     margin 0
-    padding 3rem 0
+    padding 4rem 0
 </style>

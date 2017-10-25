@@ -24,6 +24,10 @@
     <section class="work">
       <app-howdowework></app-howdowework>
     </section>
+    <!-- guarantee -->
+    <section class="guarantee">
+      <app-guarantee></app-guarantee>
+    </section>
   </main>
 </template>
 
@@ -34,6 +38,7 @@ import ourclothes from './ourclothes'
 import whyus from './whyus'
 import aboutus from './aboutus'
 import howdowework from './howdowework'
+import guarantee from './guarantee'
 
 
 export default {
@@ -44,6 +49,7 @@ export default {
     'app-whyus': whyus,
     'app-aboutus': aboutus,
     'app-howdowework': howdowework,
+    'app-guarantee': guarantee,
   }
 }
 </script>
