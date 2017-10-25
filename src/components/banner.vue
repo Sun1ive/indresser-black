@@ -8,8 +8,21 @@
     <v-layout justify-end class="text">
       <v-flex class="blackText">Мы знаем, как дорого время</v-flex>
     </v-layout>
+    <div class="arrowDown" @click="alert">
+      <v-icon>keyboard_arrow_down</v-icon>
+    </div>
   </v-container>
 </template>
+
+<script>
+  export default {
+    methods: {
+      alert () {
+        alert(1)
+      }
+    }
+  }
+</script>
 
 <style scoped lang="stylus">
 .container
@@ -26,6 +39,27 @@
       width: 100%
       max-width 722px
       height 117px
+
+.arrowDown
+  position absolute
+  bottom 0
+  left 50%
+  transform translateX(-50%)
+  i
+    font-size 8rem
+    color #fff
+    animation cool 2s linear alternate infinite
+    cursor pointer
+
+@keyframes cool {
+  from {
+    transform translateY(-10px)
+    opacity .3
+  } to {
+    transform translateY(10px)
+    opacity 1
+  }
+}
 
 .text
   max-width 1400px

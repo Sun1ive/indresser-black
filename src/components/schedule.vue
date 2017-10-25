@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-layout align-center class="layoutContainer">
-      <v-flex xs12 sm6 md10 class="test">
+      <v-flex xs12 sm6 md10>
         <img srcset="/static/schedule.png 1900w, /static/1024/logofooter1024.png 1024w" alt="logo">
       </v-flex>
       <v-flex xs12 sm6 md4>
@@ -31,12 +31,6 @@
   min-height 370px
   div
     margin 1rem 0
-  .test
-    position relative
-    // img
-    //   position absolute
-    //   left 0%
-    //   margin-top -3.5rem
   h3
     font-family 'OpenSansBold'
     font-size 1.3rem
