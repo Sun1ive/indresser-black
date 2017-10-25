@@ -4,7 +4,7 @@
       <h2 class="mb-0">Кому подходит наша одежда?</h2>
     </v-layout>
     <v-layout justify-center row wrap align-center class="layoutContainer">
-      <v-flex xs12 sm5 class="wrapper">
+    <!-- <v-flex xs12 sm5 class="wrapper">
         <div class="box">
           <p>Для тех, кто живет  в ритме города  и не беспокоится  по мелочам!  подробнее...</p>
         </div>
@@ -22,7 +22,13 @@
       <v-flex xs12 sm5 class="wrapper">
         <div class="box">
           <p>Для тех, кто выберает  стильные и удобные  платья в cтиле  Casual!</p>
-          <v-btn>подробнее ???</v-btn>
+          <a href="">подробнее</a>
+        </div>
+    </v-flex> -->
+      <v-flex xs12 sm5 class="wrapper" v-for="(item,i) in items" :key="i">
+        <div class="box">
+          <p>{{ item }}</p>
+          <a href="#">подробнее</a>
         </div>
       </v-flex>
     </v-layout>
@@ -31,7 +37,11 @@
 
 <script>
   export default {
-    
+    data () {
+      return {
+        items: [`Для тех, кто живет  в ритме города  и не беспокоится  по мелочам!`, `Для любительниц  что-то носить с собой,  теперь есть решение -  платье с карманами!`, `Для тех, кто живет  в ритме города и не беспокоится  по мелочам! `, `Для тех, кто выберает  стильные и удобные  платья в cтиле  Casual!` ]
+      }
+    }
   }
 </script>
 
@@ -58,7 +68,7 @@
       // justify-content center
       // flex-direction column
       // margin-left 2.3rem
-      padding 3.5rem 0 0 2.3rem
+      padding 3rem 0 0 2.2rem
       transition .4s ease
       &:hover
         filter grayscale(0)

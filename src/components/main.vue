@@ -1,11 +1,17 @@
 <template>
   <main>
     <!-- app banner -->
-    <app-banner></app-banner>
+    <section class="banner">
+      <app-banner></app-banner>
+    </section>
     <!-- app pains -->
-    <app-pains></app-pains>
+    <section class="pains">
+      <app-pains></app-pains>
+    </section>
     <!-- our closes -->
-    <app-ourclothes></app-ourclothes>
+    <section class="clothes">
+      <app-ourclothes></app-ourclothes>       
+    </section>
   </main>
 </template>
 

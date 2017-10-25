@@ -28,7 +28,7 @@
     </v-navigation-drawer>
     <v-toolbar>
       <v-toolbar-items>
-        <v-btn flat v-for="(item, i) in toolbarMenu" :key="i" v-scroll-to="item.scroll">{{ item.title }}</v-btn>
+        <a href="#" v-for="(item, i) in toolbarMenu" :key="i" v-scroll-to="item.scroll">{{ item.title }}</a>
       </v-toolbar-items>
       <v-toolbar-side-icon class="hidden-sm-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
@@ -41,12 +41,12 @@
       return {
         drawer: false,
         toolbarMenu: [
-          { title: 'Главная', icon: 'star', scroll: 'header' },
-          { title: 'Преимущества', icon: 'star', scroll: 'header' },
-          { title: 'О Нас', icon: 'star', scroll: 'header' },
-          { title: 'Условия', icon: 'star', scroll: 'header' },
-          { title: 'Отзывы', icon: 'star', scroll: 'header' },
-          { title: 'Контакты', icon: 'star', scroll: 'header' },
+          { title: 'Главная', icon: 'star', scroll: '.header' },
+          { title: 'Преимущества', icon: 'star', scroll: '.clothes' },
+          { title: 'О Нас', icon: 'star', scroll: '.header' },
+          { title: 'Условия', icon: 'star', scroll: '.header' },
+          { title: 'Отзывы', icon: 'star', scroll: '.header' },
+          { title: 'Контакты', icon: 'star', scroll: '.header' },
         ]
       }
     }
@@ -60,8 +60,17 @@
 .toolbar
   background-color #2b2a29
   opacity 0.3
+  transition .4s ease
+  &:hover
+    transition .4s ease
+    opacity  1
 
 .toolbar__items
   width 100%
   justify-content space-around
+  align-items center
+  a
+    text-decoration none
+    text-transform uppercase
+    color #fff
 </style>
