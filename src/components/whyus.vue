@@ -20,7 +20,7 @@
         isActive: false,
         items: [
           { icon: '/static/tag.png', text: `Экслюзивная`, secondtext: `дизайнерская одежда` },
-          { icon: '/static/truck.png', text: `Бесплатная`, secondtext: ` доставка по Украине` },
+          { icon: '/static/truck.png', text: `Бесплатная`, secondtext: `доставка по Украине` },
           { icon: '/static/diamond.png', text: `Сочетание`, secondtext: `цены и качества` },
         ]
       }
