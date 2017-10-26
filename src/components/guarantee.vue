@@ -39,7 +39,7 @@
 
 @media (max-width 1024px)
   .container
-    min-height 300px
+    min-height 270px
     h2
       padding 1rem 0
     .iconText
@@ -49,8 +49,10 @@
 
 @media (max-width 670px)
   .container
+    min-height 300px
     .iconText
       font-size 1.1rem
     h2
       font-size 1.5rem
+      padding 3rem 0 2rem 0
 </style>

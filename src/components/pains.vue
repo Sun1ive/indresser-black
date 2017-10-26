@@ -71,5 +71,5 @@
       font-size 1.02rem
       padding .3rem 0
     p
-      font-size 1rem
+      font-size .9rem
 </style>

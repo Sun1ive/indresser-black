@@ -52,6 +52,7 @@
 
 @media (max-width: 600px)
   .form
+    margin 0 1rem
     .inputtext
       width 100%
       min-width 100%

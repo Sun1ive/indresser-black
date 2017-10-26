@@ -2,7 +2,6 @@
   <v-container class="scheduleContainer">
     <v-layout align-center class="layoutContainer">
       <v-flex xs10 sm6>
-        <!-- <img srcset="/static/schedule.png 1900w, /static/1024/logofooter1024.png 1024w" alt="logo"> -->
         <img src="/static/schedule.png" style="width:100%" alt="logo">
       </v-flex>
       <v-flex xs10 sm6 md4 class="flexschedule">
@@ -11,13 +10,13 @@
           <p>г.Винница, ул. Николая Оводова, 51</p>
           <p>Главный офис</p>
         </div> -->
-        <div class="text-xs-right">
+        <div class="boxText text-xs-right">
           <h3>Контакты</h3>
           <p>Телефон: 098-02-02-092</p>
           <p>Факс: 073-02-02-029</p>
           <p>Email: info@indresser.com</p>
         </div>
-        <div class="text-xs-right">
+        <div class="boxText text-xs-right">
           <h3>Режим работы</h3>
           <p>С ПН по ПТ с 09:00 до 18:00</p>
           <p>Выходные дни - СБ и ВС</p>
@@ -49,6 +48,8 @@
 
 @media (max-width 1024px)
   .layoutContainer
+    img
+      margin-left 3rem
     h3
       font-size 1rem
     p
@@ -58,4 +59,10 @@
   .layoutContainer
     flex-direction column
     padding-top 3rem
+    img
+      margin-left 0
+    .flexschedule
+      .boxText
+        min-width 200px
+
 </style>

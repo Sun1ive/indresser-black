@@ -55,8 +55,13 @@
       font-size 1.5rem
       text-align center
 
+
 @media (max-width 500px)
   .container
     h2
       font-size 1.5rem
+    .box
+      margin-bottom 2rem
+      img
+        padding-bottom 1rem
 </style>
