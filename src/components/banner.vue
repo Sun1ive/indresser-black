@@ -14,30 +14,13 @@
   </v-container>
 </template>
 
-<script>
-  export default {
-    mounted () {
-      let height = window.innerHeight;
-      let width = window.innerWidth;
-      let arrow = document.querySelector('.arrowDown');
-      let bg = document.querySelector('.bannerContainer')
-      // console.log(height);
-      // (height <= 800) ? arrow.style.bottom = '15%' : console.log('huh');
-/*        if (width <= 480) {
-        bg.style.background = `url('/static/480/480banner.png') no-repeat center center`
-      } else if (width >= 480) {
-        bg.style.background = `url('/static/bannerbgGirl.png') no-repeat right center`
-      } */
-    }
-  }
-</script>
 
 <style scoped lang="stylus">
 .bannerContainer
-  background-image url('/static/bannergirl.png')
+  background-image url('/static/bannerbg.png')
   height 90vh
   background-position right center
-  position relative
+  // position relative
   overflow hidden
   .banner
     min-height inherit
@@ -51,7 +34,7 @@
 
 .arrowDown
   position absolute
-  bottom 0
+  bottom 10%
   left 50%
   transform translateX(-50%)
   i

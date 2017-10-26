@@ -3,7 +3,7 @@
     <v-layout column justify-center align-center>
       <h2 class="mb-0 text-xs-left">{{ currentItem.title }} </h2>
       <p class="mb-0">{{ currentItem.desc }}</p>
-      <button class="myBtn">Получить консультацию</button>
+      <button class="myBtn" @click.stop="showOfferCall">Получить консультацию</button>
     </v-layout>
     <v-layout justify-center>
       <h2>Топ продаж</h2>
@@ -18,7 +18,11 @@
     </v-layout>
     <div class="close" @click.stop="closeModal"></div>
 
-    <v-dialog ref="catalog" max-width="300" v-model="isVisibleCatalog">
+    <v-dialog max-width="70vh" v-model="isVisibleOfferCall">
+      <app-offercall></app-offercall>
+    </v-dialog>
+
+    <v-dialog ref="catalog" max-width="380px" v-model="isVisibleCatalog">
       <app-catalogform></app-catalogform>
     </v-dialog>
   </v-container>
@@ -27,16 +31,19 @@
 <script>
 import { gallery } from '../store/index'
 import catalogForm from './catalogForm'
+import offerCall from './offerCall'
 
 
 export default {
   props: ['currentItem'],
   components: {
-    'app-catalogform': catalogForm
+    'app-catalogform': catalogForm,
+    'app-offercall': offerCall,
   },
   data () {
     return {
-      isVisibleCatalog: false
+      isVisibleCatalog: false,
+      isVisibleOfferCall: false
     }
   },
   methods: {
@@ -44,11 +51,12 @@ export default {
       this.$emit('closeModal');
     },
     showCatalog () {
-      // console.log(1);
       let dialog = this.$refs.catalog.$refs.content.style;
-      // console.log(dialog.justifyContent);
       (dialog.justifyContent === '') ? dialog.justifyContent = 'center' :
       this.isVisibleCatalog = true
+    },
+    showOfferCall () {
+      this.isVisibleOfferCall = true
     }
   },
   computed: {
