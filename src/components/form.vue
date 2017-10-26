@@ -45,4 +45,16 @@
     color #fff
     font-size 1.3rem
     margin-top .5rem
+
+@media (max-width: 600px)
+  .form
+    .inputtext
+      width 100%
+      min-width 100%
+
+@media (max-width 360px)
+  .form
+    h2
+      text-align center
+      font-size 1.5rem
 </style>

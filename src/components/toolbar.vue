@@ -110,6 +110,7 @@
     text-transform uppercase
     color #fff
     margin 0 2rem
+    font-family 'OpenSans-Semibold', Arial, Helvetica, sans-serif
 
 @media (max-width 960px)
   .toolbar__items
