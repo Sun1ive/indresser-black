@@ -10,7 +10,7 @@
           <input required class="inputtext" type="email" placeholder="e-mail">
         </div>
         <input required type="text" placeholder="Тема">
-        <textarea required name="" placeholder="Сообщение..." cols="20" rows="8"></textarea>
+        <textarea required placeholder="Сообщение..." cols="20" rows="8"></textarea>
         <button type="submit">Отправить</button>
       </form>
     </v-layout>
@@ -27,6 +27,8 @@
 .formContainer
   min-height 510px
   background-image url('/static/bgAbout.png')
+  h2
+    color #fff
 .form
   display flex
   flex-flow column wrap
@@ -35,13 +37,14 @@
     min-width 290px
   input
   textarea
+    background-color #fff
     padding 0.3rem 1.2rem
     margin 0.3rem 0
     border 2px solid #d5d5d5
   button
-    margin-bottom 0
+    margin-bottom 6rem
     min-height 45px
-    background-color #4b4b4b
+    background-color #FF2226
     text-transform uppercase
     color #fff
     font-size 1.3rem

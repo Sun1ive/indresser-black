@@ -11,7 +11,7 @@
         </div>
       </v-flex>
     </v-layout>
-    <v-dialog ref="dialog" persistent max-width="65vh" v-model="isActive">
+    <v-dialog ref="dialog" max-width="65vh" v-model="isActive">
       <app-card :currentItem="currentItem" @closeModal="closeModal"></app-card>
     </v-dialog>
   </v-container>

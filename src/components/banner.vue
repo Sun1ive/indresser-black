@@ -34,10 +34,11 @@
 
 <style scoped lang="stylus">
 .bannerContainer
-  background-image url('/static/bannerbgGirl.png')
+  background-image url('/static/bannergirl.png')
   height 90vh
   background-position right center
   position relative
+  overflow hidden
   .banner
     min-height inherit
     max-width 1400px
