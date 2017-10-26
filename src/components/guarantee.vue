@@ -39,8 +39,18 @@
 
 @media (max-width 1024px)
   .container
-    min-height 270px
-
+    min-height 300px
+    h2
+      padding 1rem 0
+    .iconText
+      font-size 1.5rem
   .box
     margin 1rem !important
+
+@media (max-width 670px)
+  .container
+    .iconText
+      font-size 1.1rem
+    h2
+      font-size 1.5rem
 </style>

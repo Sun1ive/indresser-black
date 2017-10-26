@@ -30,6 +30,7 @@
     min-height 99px
     .white--text
       font-size 1.1rem
+      text-align center
 .socials
   display flex
   padding 0
@@ -39,4 +40,10 @@
     a
       color #fff
       font-size 2.5rem
+
+@media (max-width 400px)
+  .socials
+    li
+      a
+        font-size 2rem
 </style>

@@ -4,7 +4,7 @@
       <h2 class="darkgrey">Как мы работаем?</h2>
     </v-layout>
     <v-layout class="layoutContainer" wrap row justify-center align-center>
-      <v-flex xs12 sm4 md4 lg3 v-for="(item, i) in items" :key="i">
+      <v-flex xs12 sm6 md4 lg3 v-for="(item, i) in items" :key="i">
         <img :src="item.icon" :alt="item.title">
         <p class="mb-0 iconText">{{ item.title }}</p>
         <a href="#" @click.stop.prevent="showDetails(item)">{{ item.button }}</a>
@@ -60,6 +60,7 @@ import terms from './modals/terms'
 .containeD
   min-height 660px
   background-image url('/static/bgwork.png')
+  background-color #fff
   .layoutContainer
     margin 0 auto !important
     .flex
@@ -68,8 +69,6 @@ import terms from './modals/terms'
       flex-flow column wrap
       align-items center
       margin 0 3rem
-      &:last-child
-        margin-top 3rem
       img
         padding-bottom 3.5rem
       a
@@ -84,8 +83,19 @@ import terms from './modals/terms'
 @media (max-width 1024px)
   .flex
     margin 0 !important
-    &:last-child
-      margin-top 3rem !important
+    img
+      padding-bottom 1rem !important
   .container
     min-height 530px
+
+@media (max-width 500px)
+  .container
+    img
+      padding-bottom 1rem !important
+    h2
+      font-size 1.5rem
+    p
+      font-size 1.2rem !important
+    a
+      padding-bottom 1.5rem
 </style>

@@ -46,4 +46,17 @@
     img
       padding-bottom 3.5rem
       min-width 99px
+
+@media (max-width: 1024px)
+  .container
+    h2
+      padding 1rem 0
+    p
+      font-size 1.5rem
+      text-align center
+
+@media (max-width 500px)
+  .container
+    h2
+      font-size 1.5rem
 </style>

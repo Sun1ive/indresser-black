@@ -137,7 +137,7 @@ import card from './modals/card'
     min-height 1000px
     margin-top -5px
     h2
-      padding 1rem 0
+      padding 0
       font-size 1.5rem
       text-align center
     .text

@@ -33,8 +33,10 @@ export default {
 @import './stylus/main'
 
 body
-  font-family OpenSans
+  font-family 'OpenSans', Arial, Helvetica, sans-serif
 
 .container
   padding 0
+
+
 </style>
