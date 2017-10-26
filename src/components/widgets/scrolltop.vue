@@ -1,5 +1,7 @@
 <template>
-  <div class="scrolltop" @click="scrollToTop"></div>
+  <div class="scrolltop" @click="scrollToTop">
+    <v-icon>keyboard_arrow_up</v-icon>
+  </div>
 </template>
 
 <script>
@@ -34,7 +36,7 @@
   width 60px
   height 60px
   background-color #fff
-  border 1px solid #333
+  border 1px solid #c0c0c0
   position fixed
   bottom -150px
   right 30px
@@ -43,13 +45,12 @@
   opacity 0.3
   transition .4s linear
   animation topDown 2s linear infinite alternate
-  &:after
-    content '\2B06'
+  .icon
     position absolute
     top 50%
     left 50%
     transform translate(-50%,-50%)
-    font-size 3rem
+    font-size 5rem
   &:hover
     opacity 1
     transition .4s linear

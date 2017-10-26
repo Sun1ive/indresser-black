@@ -73,6 +73,7 @@
 <style scoped lang="stylus">
 .header
   background-color #2b2a29 + 50%
+  z-index 3
 
 .toolbar
   background-color #2b2a29

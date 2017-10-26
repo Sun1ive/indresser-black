@@ -36,10 +36,6 @@
     <section class="form">
       <app-form></app-form>
     </section>
-    <!-- gmap -->
-    <section class="gmap">
-      <app-gmap></app-gmap>
-    </section>
     <!-- schedule -->
     <section class="schedule">
       <app-schedule></app-schedule>
@@ -57,7 +53,6 @@ import howdowework from './howdowework'
 import guarantee from './guarantee'
 import reviews from './reviews'
 import form from './form'
-import gmap from './gmap'
 import schedule from './schedule'
 
 
@@ -72,7 +67,6 @@ export default {
     'app-guarantee': guarantee,
     'app-reviews': reviews,
     'app-form': form,
-    'app-gmap': gmap,
     'app-schedule': schedule,
   }
 }

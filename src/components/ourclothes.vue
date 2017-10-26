@@ -7,7 +7,7 @@
       <v-flex xs12 sm5 class="wrapper" v-for="(item,i) in items" :key="i" @click.stop="showModal(item)">
         <div class="box">
           <p class="text">{{ item.title }}</p>
-          <a>подробнее</a>
+          <div class="details">подробнее</div>
         </div>
       </v-flex>
     </v-layout>
@@ -69,14 +69,21 @@ import card from './modals/card'
     max-height 300px
     margin: 0 15px
     cursor pointer
+    overflow hidden
     .box
       filter grayscale(100%)
       min-height 300px
       padding 3rem 0 0 2.2rem
       transition .4s ease
+      display flex
+      flex-flow column wrap
+      justify-content space-between
       &:hover
         filter grayscale(0)
         transition .4s ease
+      .details
+        font-size 1.85rem
+        padding-bottom 2rem
     &:nth-child(1)
       .box
         background url('/static/firstGirl.png') 90% center no-repeat
@@ -89,8 +96,9 @@ import card from './modals/card'
     &:nth-child(4)
       .box
         background url('/static/fourthgirl.png') 101% center no-repeat
-    p
-      max-width 270px
+    .text
+      max-width 65%
+      margin-bottom 0
 
 @media (max-width 1024px)
   .container
@@ -102,6 +110,10 @@ import card from './modals/card'
       max-height 200px
       .box
         min-height 195px
+        padding 1rem
+        .details
+          font-size 1.2rem
+          padding-bottom 0rem
       &:nth-child(1)
         .box
           background url('/static/1024/girlone.png') 90% -5% no-repeat

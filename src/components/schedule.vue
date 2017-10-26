@@ -1,15 +1,15 @@
 <template>
-  <v-container>
+  <v-container class="scheduleContainer">
     <v-layout align-center class="layoutContainer">
       <v-flex xs12 sm6 md10>
         <img srcset="/static/schedule.png 1900w, /static/1024/logofooter1024.png 1024w" alt="logo">
       </v-flex>
       <v-flex xs12 sm6 md4>
-        <div class="text-xs-right">
+<!--         <div class="text-xs-right">
           <h3>Адрес</h3>
           <p>г.Винница, ул. Николая Оводова, 51</p>
           <p>Главный офис</p>
-        </div>
+        </div> -->
         <div class="text-xs-right">
           <h3>Контакты</h3>
           <p>Телефон: 098-02-02-092</p>
@@ -18,8 +18,8 @@
         </div>
         <div class="text-xs-right">
           <h3>Режим работы</h3>
-          <p>С понедельника по пятницу с 09:00 до 18:00</p>
-          <p>Выходные дни - суббота и воскресенье</p>
+          <p>С ПН по ПТ с 09:00 до 18:00</p>
+          <p>Выходные дни - СБ и ВС</p>
         </div>
       </v-flex>
     </v-layout>

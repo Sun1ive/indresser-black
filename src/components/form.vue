@@ -6,11 +6,11 @@
     <v-layout justify-center align-center class="layoutContainer">
       <form class="form" action="">
         <div>
-          <input required class="inputtext" type="email" placeholder="Email">
+          <input required class="inputtext" type="email" placeholder="e-mail">
           <input required class="inputtext" type="text" placeholder="Имя">
         </div>
         <input required type="text" placeholder="Тема">
-        <textarea required name="" placeholder="Сообщение" cols="20" rows="8"></textarea>
+        <textarea required name="" placeholder="Сообщение..." cols="20" rows="8"></textarea>
         <button type="submit">Отправить</button>
       </form>
     </v-layout>

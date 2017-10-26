@@ -36,7 +36,13 @@
     color #8e8e8e
     line-height 1.2
     margin-bottom 0
-  
+
+@media (max-width: 1300px)
+  .container
+    p
+      font-size 1.4rem
+
+
 @media (max-width: 1024px)
   .container
     p

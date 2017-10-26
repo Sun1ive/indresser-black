@@ -6,7 +6,7 @@
       </v-flex>
     </v-layout>
     <v-layout justify-end class="text">
-      <v-flex class="blackText">Мы знаем, как дорого время</v-flex>
+      <v-flex class="blackText text-xs-center">Мы знаем, как дорого время</v-flex>
     </v-layout>
     <div class="arrowDown">
       <v-icon>keyboard_arrow_down</v-icon>
@@ -23,10 +23,10 @@
       let bg = document.querySelector('.bannerContainer')
       // console.log(height);
       // (height <= 800) ? arrow.style.bottom = '15%' : console.log('huh');
-/*       if (width <= 480) {
+/*        if (width <= 480) {
         bg.style.background = `url('/static/480/480banner.png') no-repeat center center`
-      } else {
-        console.log('lyl');
+      } else if (width >= 480) {
+        bg.style.background = `url('/static/bannerbgGirl.png') no-repeat right center`
       } */
     }
   }
@@ -34,7 +34,7 @@
 
 <style scoped lang="stylus">
 .bannerContainer
-  background-image url('/static/test1.png')
+  background-image url('/static/bannerbgGirl.png')
   height 100vh
   background-position right center
   position relative
@@ -74,11 +74,7 @@
   margin 0 auto
 .blackText
   max-width 562px
-  max-height 48px
-  min-width 500px
-  min-height 45px
-  width 100%
-  height 100%
+  min-height 40px
   background-color #2b2a29
   text-transform uppercase
   display flex
@@ -90,6 +86,27 @@
 
 
 @media (max-width 1400px)
+  .blackText
+    font-size 1.8rem
+    max-width 420px
   .text
     margin-right 2rem
+
+@media (max-width 480px)
+  .bannerContainer
+    background url('/static/480/480banner.png') no-repeat center center
+    .text
+      justify-content center
+      margin-right 0
+    .blackText
+      font-size 1.4rem
+      max-width 340px
+    img
+      display none
+@media (max-width 400px)
+  .bannerContainer
+    background url('/static/320/320logobanner.png') no-repeat center center
+    .blackText
+      font-size 1rem
+      max-width 250px
 </style>
