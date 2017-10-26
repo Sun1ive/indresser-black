@@ -53,9 +53,9 @@ import card from './modals/card'
 
 <style scoped lang="stylus">
 .clothesBG
-  background url('/static/cardbg.png') center center no-repeat
+  background url('/static/cardbg1.png') center center no-repeat
   height 830px
-  margin-left -2px
+  background-size cover
   display flex
   justify-content center
   align-items center
@@ -101,7 +101,7 @@ import card from './modals/card'
       margin-bottom 0
 
 @media (max-width 1024px)
-  .container
+  .clothesBG
     height 540px
     background-image url('/static/1024/cardbg1024.png')
     .wrapper
@@ -111,6 +111,9 @@ import card from './modals/card'
       .box
         min-height 195px
         padding 1rem
+        .text
+          font-size 1.2rem
+          line-height 1.9rem
         .details
           font-size 1.2rem
           padding-bottom 0rem
@@ -126,4 +129,17 @@ import card from './modals/card'
       &:nth-child(4)
         .box
           background url('/static/1024/girlfour.png') 101% -5% no-repeat
+
+@media (max-width 600px)
+  .clothesBG
+    background-image url('/static/480/480cardbg.png')
+    height auto
+    min-height 1000px
+    margin-top -5px
+    h2
+      padding 1rem 0
+      font-size 1.5rem
+      text-align center
+    .text
+      font-size 1rem !important
 </style>

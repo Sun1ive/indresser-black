@@ -35,7 +35,7 @@
 <style scoped lang="stylus">
 .bannerContainer
   background-image url('/static/bannerbgGirl.png')
-  height 100vh
+  height 90vh
   background-position right center
   position relative
   .banner

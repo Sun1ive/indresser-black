@@ -19,7 +19,7 @@
 
 <style scoped lang="stylus">
 .container
-  height 775px
+  height 770px
   background-image url('/static/pain.png')
   display flex
   align-items center
@@ -59,7 +59,7 @@
 @media (max-width: 480px)
   .container
     background-image url('/static/480/480bgpain.png')
-    height 775px
+    height 770px
   .layoutContainer
     max-width: 380px
     p 

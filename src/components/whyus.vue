@@ -45,4 +45,5 @@
     justify-content center
     img
       padding-bottom 3.5rem
+      min-width 99px
 </style>
