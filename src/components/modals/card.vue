@@ -18,7 +18,7 @@
     </v-layout>
     <div class="close" @click.stop="closeModal"></div>
 
-    <v-dialog max-width="70vh" v-model="isVisibleOfferCall">
+    <v-dialog ref="offercall" max-width="70vh" v-model="isVisibleOfferCall">
       <app-offercall></app-offercall>
     </v-dialog>
 
@@ -52,10 +52,14 @@ export default {
     },
     showCatalog () {
       let dialog = this.$refs.catalog.$refs.content.style;
-      (dialog.justifyContent === '') ? dialog.justifyContent = 'center' :
+      if (dialog.justifyContent === '') { dialog.justifyContent = 'center' }
+
       this.isVisibleCatalog = true
     },
     showOfferCall () {
+      let call = this.$refs.offercall.$refs.content.style;
+      if (call.justifyContent === '') { call.justifyContent = 'center' }
+
       this.isVisibleOfferCall = true
     }
   },
