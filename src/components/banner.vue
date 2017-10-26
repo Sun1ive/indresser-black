@@ -1,14 +1,14 @@
 <template>
-  <v-container fluid>
+  <v-container class="bannerContainer" fluid>
     <v-layout align-center class="banner">
-      <v-flex xs12 sm12 md10 lg6 class="text-xs-center">
+      <v-flex xs12 sm12 md10 lg8 class="text-xs-center">
         <img src="/static/logobanner.png" alt="logo">
       </v-flex>
     </v-layout>
     <v-layout justify-end class="text">
       <v-flex class="blackText">Мы знаем, как дорого время</v-flex>
     </v-layout>
-    <div class="arrowDown" @click="alert">
+    <div class="arrowDown">
       <v-icon>keyboard_arrow_down</v-icon>
     </div>
   </v-container>
@@ -16,24 +16,32 @@
 
 <script>
   export default {
-    methods: {
-      alert () {
-        alert(1)
-      }
+    mounted () {
+      let height = window.innerHeight;
+      let width = window.innerWidth;
+      let arrow = document.querySelector('.arrowDown');
+      let bg = document.querySelector('.bannerContainer')
+      // console.log(height);
+      // (height <= 800) ? arrow.style.bottom = '15%' : console.log('huh');
+/*       if (width <= 480) {
+        bg.style.background = `url('/static/480/480banner.png') no-repeat center center`
+      } else {
+        console.log('lyl');
+      } */
     }
   }
 </script>
 
 <style scoped lang="stylus">
-.container
+.bannerContainer
   background-image url('/static/test1.png')
-  height 850px
+  height 100vh
   background-position right center
   position relative
   .banner
     min-height inherit
-    height 700px
     max-width 1400px
+    min-height 80vh
     margin 0 auto
     img
       width: 100%
@@ -47,7 +55,7 @@
   transform translateX(-50%)
   i
     font-size 8rem
-    color #fff
+    color #c0c0c0
     animation cool 2s linear alternate infinite
     cursor pointer
 
@@ -80,5 +88,8 @@
   color #fff
   font-size 2.4rem
 
-
+@media (max-width 480px)
+  .bannerContainer
+    img
+      display none
 </style>

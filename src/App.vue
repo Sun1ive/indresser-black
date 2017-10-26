@@ -6,6 +6,9 @@
     <app-main></app-main>
     <!-- footer -->
     <app-footer></app-footer>
+
+    <!-- widgets -->
+    <app-scrolltop></app-scrolltop>
   </v-app>
 </template>
 
@@ -13,12 +16,15 @@
 import toolbar from './components/toolbar'
 import main from './components/main'
 import footer from './components/footer'
+import scrolltop from './components/widgets/scrolltop'
+
 
 export default {
   components: {
     'app-toolbar': toolbar,
     'app-main': main,
     'app-footer': footer,
+    'app-scrolltop': scrolltop,
   }
 }
 </script>

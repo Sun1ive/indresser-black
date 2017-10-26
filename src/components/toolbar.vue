@@ -77,6 +77,7 @@
 .toolbar
   background-color #2b2a29
   position static
+  display none
 
 .fixed
   position fixed
