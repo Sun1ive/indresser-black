@@ -1,8 +1,8 @@
 <template>
   <v-container class="modal">
     <v-layout column justify-center align-center>
-      <h2 class="mb-0 text-xs-center">{{ currentItem }} </h2>
-      <p class="mb-0"></p>
+      <h2 class="mb-0 text-xs-left">{{ currentItem.title }} </h2>
+      <p class="mb-0">{{ currentItem.desc }}</p>
       <button class="myBtn">Заказать звонок</button>
     </v-layout>
     <v-layout justify-center>

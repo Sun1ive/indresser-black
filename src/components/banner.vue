@@ -88,8 +88,8 @@
   color #fff
   font-size 2.4rem
 
-@media (max-width 480px)
-  .bannerContainer
-    img
-      display none
+
+@media (max-width 1400px)
+  .text
+    margin-right 2rem
 </style>

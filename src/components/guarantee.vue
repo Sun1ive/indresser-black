@@ -35,6 +35,7 @@
       color #8e8e8e
       margin-bottom 0
       margin-left 2rem
+      text-align left
 
 @media (max-width 1024px)
   .container

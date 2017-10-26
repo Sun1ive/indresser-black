@@ -81,6 +81,7 @@
 
 .fixed
   position fixed
+  display block
   top 0
   opacity .4
   animation fade 1.3s ease

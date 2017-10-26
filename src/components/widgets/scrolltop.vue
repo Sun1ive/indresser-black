@@ -1,5 +1,5 @@
 <template>
-  <div class="scrolltop"></div>
+  <div class="scrolltop" @click="scrollToTop"></div>
 </template>
 
 <script>
@@ -15,6 +15,9 @@
           scroll.classList.remove('visible')
           console.log(2);
         }
+      },
+      scrollToTop () {
+        window.scrollTo(0,0)
       }
     },
     created () {

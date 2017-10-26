@@ -4,10 +4,10 @@
       <h2 class="mb-0">Кому подходит наша одежда?</h2>
     </v-layout>
     <v-layout justify-center row wrap align-center class="layoutContainer">
-      <v-flex xs12 sm5 class="wrapper" v-for="(item,i) in items" :key="i">
+      <v-flex xs12 sm5 class="wrapper" v-for="(item,i) in items" :key="i" @click.stop="showModal(item)">
         <div class="box">
-          <p class="text">{{ item }}</p>
-          <a href="#" @click.stop.prevent="showModal(item)">подробнее</a>
+          <p class="text">{{ item.title }}</p>
+          <a>подробнее</a>
         </div>
       </v-flex>
     </v-layout>
@@ -27,7 +27,12 @@ import card from './modals/card'
       return {
         isActive: false,
         currentItem: '',
-        items: [`Для тех, кто живет в ритме города и не беспокоится по мелочам`, `Для любительниц что-то носить с собой, теперь есть решение - платье с карманами`, `Для тех, кто живет в ритме города и не беспокоится по мелочам! `, `Для тех, кто выберает стильные и удобные платья в cтиле Casual` ]
+        items: [
+          { title: `Для тех, кто живет в ритме города и не беспокоится по мелочам`, desc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius adipisci minus, voluptates similique. Voluptates blanditiis, saepe cumque commodi sed ipsam magni provident, enim accusantium, itaque explicabo obcaecati temporibus ea neque!` },
+          { title: `Для любительниц что-то носить с собой, теперь есть решение - платье с карманами`, desc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius adipisci minus, voluptates similique. Voluptates blanditiis, saepe cumque commodi sed ipsam magni provident, enim accusantium, itaque explicabo obcaecati temporibus ea neque!` },
+          { title: `Для тех, кто выберает стильные и удобные платья в cтиле Casual`, desc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius adipisci minus, voluptates similique. Voluptates blanditiis, saepe cumque commodi sed ipsam magni provident, enim accusantium, itaque explicabo obcaecati temporibus ea neque!` },
+          { title: `Для тех, кто живет в ритме города и не беспокоится по мелочам!`, desc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius adipisci minus, voluptates similique. Voluptates blanditiis, saepe cumque commodi sed ipsam magni provident, enim accusantium, itaque explicabo obcaecati temporibus ea neque!` },
+        ]
       }
     },
     methods: {
@@ -63,6 +68,7 @@ import card from './modals/card'
     max-width 504px
     max-height 300px
     margin: 0 15px
+    cursor pointer
     .box
       filter grayscale(100%)
       min-height 300px
