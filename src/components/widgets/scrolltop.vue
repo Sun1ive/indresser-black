@@ -58,7 +58,7 @@
 
 .visible
   display block
-  bottom 10px
+  bottom 60px
   right 30px
 
 @keyframes topDown {

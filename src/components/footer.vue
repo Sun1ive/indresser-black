@@ -2,7 +2,7 @@
   <footer>
     <v-container fluid>
       <v-layout align-center row wrap class="layoutContainer">
-        <v-flex xs12 sm6 md8 class="white--text">&copy; {{ new Date().getFullYear() }} inDresser</v-flex>
+        <v-flex xs12 sm6 md8 class="white--text text-lg-left text-md-left text-sm-left text-xs-center">&copy; {{ new Date().getFullYear() }} inDresser</v-flex>
         <v-flex xs12 sm6 md4>
           <ul class="socials">
             <li><a href="#"><i class="fa fa-youtube" target="_blank"></i></a></li>
@@ -30,7 +30,8 @@
     min-height 99px
     .white--text
       font-size 1.1rem
-      text-align center
+
+
 .socials
   display flex
   padding 0

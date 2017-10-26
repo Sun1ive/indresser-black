@@ -5,10 +5,10 @@
     </v-layout>
     <v-layout class="layoutContainer">
       <v-carousel ref="slider" hide-controls>
-        <v-carousel-item src="/static/slide.png"></v-carousel-item>
-        <v-carousel-item src="/static/slide.png"></v-carousel-item>
-        <v-carousel-item src="/static/slide.png"></v-carousel-item>
-        <v-carousel-item src="/static/slide.png"></v-carousel-item>
+        <v-carousel-item src="/static/slide1.png"></v-carousel-item>
+        <v-carousel-item src="/static/slide1.png"></v-carousel-item>
+        <v-carousel-item src="/static/slide1.png"></v-carousel-item>
+        <v-carousel-item src="/static/slide1.png"></v-carousel-item>
       </v-carousel>
     </v-layout>
   </v-container>
@@ -21,7 +21,7 @@
 
 <style scoped lang="stylus">
 .carousel
-  height 400px
+  height 300px
   box-shadow none
   &__item
     transition .8s ease

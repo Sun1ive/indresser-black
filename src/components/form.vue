@@ -1,13 +1,13 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="formContainer">
     <v-layout justify-center>
       <h2 class="darkgrey">Свяжитесь с нами</h2>
     </v-layout>
     <v-layout justify-center align-center class="layoutContainer">
       <form class="form" action="">
         <div>
-          <input required class="inputtext" type="email" placeholder="e-mail">
           <input required class="inputtext" type="text" placeholder="Имя">
+          <input required class="inputtext" type="email" placeholder="e-mail">
         </div>
         <input required type="text" placeholder="Тема">
         <textarea required name="" placeholder="Сообщение..." cols="20" rows="8"></textarea>
@@ -24,8 +24,9 @@
 </script>
 
 <style scoped lang="stylus">
-.container
+.formContainer
   min-height 510px
+  background-image url('/static/bgAbout.png')
 .form
   display flex
   flex-flow column wrap

@@ -4,7 +4,7 @@
       <h2 class="darkgrey">Как мы работаем?</h2>
     </v-layout>
     <v-layout class="layoutContainer" wrap row justify-center align-center>
-      <v-flex xs12 sm6 md4 lg4 v-for="(item, i) in items" :key="i">
+      <v-flex class="py-4" xs12 sm6 md4 lg4 v-for="(item, i) in items" :key="i">
         <img :src="item.icon" :alt="item.title">
         <p class="mb-0 iconText">{{ item.title }}</p>
         <a href="#" @click.stop.prevent="showDetails(item)">{{ item.button }}</a>
@@ -69,7 +69,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$refs.dialog.$refs.dialog);
     let dialog = this.$refs.dialog.$refs.dialog;
     dialog.style.minWidth = '500px';
   }
@@ -77,37 +76,27 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.containeD {
+.containeD
   min-height: 660px;
   background-image: url('/static/bgwork.png');
   background-color: #fff;
-
-  .layoutContainer {
+  .layoutContainer
     margin: 0 auto !important;
-
-    .flex {
+    .flex
       display: flex;
       justify-content: center;
       flex-flow: column wrap;
       align-items: center;
       margin: 0 3rem;
-
-      img {
-        padding-bottom: 3.5rem;
-      }
-
-      a {
+      img
+        padding-bottom: 1.5rem;
+      a
         text-decoration: none;
         transition: 0.4s linear;
-
-        &:hover {
+        &:hover
           transition: 0.4s linear;
           color: red;
-        }
-      }
-    }
-  }
-}
+
 
 @media (max-width: 1024px) 
   .flex 
