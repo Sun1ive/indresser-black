@@ -29,7 +29,6 @@
 </template>
 
 <script>
-// import { gallery } from '../store/index'
 import catalogForm from './catalogForm'
 import offerCall from './offerCall'
 
@@ -62,11 +61,6 @@ export default {
 
       this.isVisibleOfferCall = true
     }
-  },
-  computed: {
-    // gallery () {
-    //   return gallery
-    // }
   }
 }
 </script>

@@ -4,11 +4,11 @@
       <h2 class="darkgrey">Свяжитесь с нами</h2>
     </v-layout>
     <v-layout justify-center align-center class="layoutContainer">
-      <form class="form" method="POST" action="">
+      <form class="form" method="POST" action="/static/php/form.php">
         <input required name="user_name" class="inputtext" type="text" placeholder="Имя">
         <input required name="user_email" class="inputtext" type="email" placeholder="e-mail">
-        <input required name="user_text" type="text" placeholder="Тема">
-        <textarea required placeholder="Сообщение..." cols="20" rows="8"></textarea>
+        <input required name="user_topic" type="text" placeholder="Тема">
+        <textarea required name="user_message" placeholder="Сообщение..." cols="20" rows="8"></textarea>
         <button type="submit">Отправить</button>
       </form>
     </v-layout>

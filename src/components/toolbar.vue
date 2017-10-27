@@ -27,6 +27,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar ref="toolbar" height="73px">
+      <div class="myBtn"></div>
       <v-toolbar-items class="hidden-xs-only">
         <a href="#" v-for="(item, i) in toolbarMenu" :key="i" v-scroll-to="item.scroll">{{ item.title }}</a>
       </v-toolbar-items>
@@ -120,4 +121,15 @@
 @media (max-width 960px)
   .toolbar__items
     display none
+
+.myBtn
+  background-color: #917438
+  width 100%
+  max-width 450px
+  margin-bottom: 0
+  padding .4rem 0
+  border-radius: 6px
+  font-family: 'OpenSans-Semibold', Arial, Helvetica, sans-serif
+  font-size: 1.3rem
+  text-transform uppercase
 </style>
