@@ -13,7 +13,7 @@
 
 <style scoped lang="stylus">
 .container
-  background-image url('/static/bgAbout.png')
+  background-image url('/static/bgAbout1.png')
   min-height 475px
   p
     text-indent 1.5rem

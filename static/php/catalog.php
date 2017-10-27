@@ -11,4 +11,4 @@ $title = "Заказ каталога с лендинга \"$sitename\" на п�
 
 mail($recepient, $title, $message, $headers);
 
-header('location: https://dev.indresser.com');
+header('location: https://dresses.indresser.com');

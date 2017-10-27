@@ -18,7 +18,7 @@
 <style scoped lang="stylus">
 .formContainer
   min-height 510px
-  background-image url('/static/bgAbout.png')
+  background-image url('/static/bgAbout1.png')
   h2
     color #fff
 .form

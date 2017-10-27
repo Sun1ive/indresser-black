@@ -16,4 +16,4 @@ $title = "Письмо с формы обратной связи \"$sitename\" �
 mail($recepient, $title, $message, $headers);
 mail($recepient2, $title, $message, $headers);
 
-header('location: https://dev.indresser.com');
+header('location: https://dresses.indresser.com');
