@@ -26,7 +26,6 @@ export default {
     'app-footer': footer,
     'app-scrolltop': scrolltop,
   },
-  mounted ()
 }
 </script>
 

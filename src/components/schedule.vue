@@ -13,7 +13,7 @@
         <div class="boxText text-xs-right">
           <h3>Контакты</h3>
           <p>Телефон: 098-02-02-092</p>
-          <p>Факс: 073-02-02-029</p>
+          <p>Факс: 073-02-02-090</p>
           <p>Email: info@indresser.com</p>
         </div>
         <div class="boxText text-xs-right">
