@@ -3,10 +3,10 @@
     <v-layout justify-center>
       <h2 class="darkgrey text-xs-center">Свяжитесь с нами</h2>
     </v-layout>
-    <v-layout justify-center align-center class="layoutContainer">
+    <v-layout justify-center class="layoutContainer">
       <form class="form" method="POST" action="/static/php/form.php">
-        <input required name="user_name" class="inputtext" type="text" placeholder="Имя">
-        <input required name="user_email" class="inputtext" type="email" placeholder="e-mail">
+        <input required name="user_name" type="text" placeholder="Имя">
+        <input required name="user_email" type="email" placeholder="e-mail">
         <input required name="user_topic" type="text" placeholder="Тема">
         <textarea required name="user_message" placeholder="Сообщение..." cols="20" rows="8"></textarea>
         <button type="submit">Отправить</button>
@@ -25,9 +25,6 @@
   display flex
   flex-flow column wrap
   min-width 600px
-  .inputtext
-    margin 0.3rem 0.1rem
-    min-width 290px
   input
   textarea
     background-color #fff
@@ -57,7 +54,6 @@
     min-width 280px
   h2
     font-size 1.5rem
-    .inputtext
     textarea
       min-width 280px
 </style>

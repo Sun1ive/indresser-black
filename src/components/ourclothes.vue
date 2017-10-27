@@ -1,7 +1,7 @@
 <template>
   <v-container class="clothesBG" fluid>
     <v-layout class="head" justify-center align-center>
-      <h2 class="mb-0">Кому подходит наша одежда?</h2>
+      <h2 class="mb-0">Самые популярные модели</h2>
     </v-layout>
     <v-layout justify-center row wrap align-center class="layoutContainer">
       <v-flex xs12 sm5 class="wrapper" v-for="(item,i) in items" :key="i" @click.stop="showModal(item)">
