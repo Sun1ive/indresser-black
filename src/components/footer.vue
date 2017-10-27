@@ -17,12 +17,6 @@
   </footer>
 </template>
 
-<script>
-  export default {
-    
-  }
-</script>
-
 <style scoped lang="stylus">
 .container
   background-color #2a2a2a

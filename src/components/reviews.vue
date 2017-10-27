@@ -5,7 +5,7 @@
     </v-layout>
     <v-layout justify-center class="layoutContainer">
       <v-carousel ref="slider" hide-controls>
-        <v-carousel-item src="/static/slide1.png"></v-carousel-item>
+        <v-carousel-item src="/static/test/1.png"></v-carousel-item>
         <v-carousel-item src="/static/lowres/testslide.png"></v-carousel-item>
         <v-carousel-item src="/static/slide1.png"></v-carousel-item>
         <v-carousel-item src="/static/slide1.png"></v-carousel-item>

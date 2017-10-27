@@ -68,6 +68,8 @@ import card from './modals/card'
   flex-flow column nowrap
   .head
     max-height 15%
+    h2
+      padding 1rem 0
   .wrapper
     background-image url('/static/boxBg.png')
     min-height 300px
@@ -92,16 +94,16 @@ import card from './modals/card'
         padding-bottom 2rem
     &:nth-child(1)
       .box
-        background url('/static/firstGirl.png') 90% center no-repeat
+        background url('/static/girls/1.png') right center no-repeat
     &:nth-child(2)
       .box
-        background url('/static/secondgirl.png') 103% center no-repeat
+        background url('/static/girls/2.png') right center no-repeat
     &:nth-child(3)
       .box
-        background url('/static/thirdgirl.png') 100% center no-repeat
+        background url('/static/girls/3.png') right center no-repeat
     &:nth-child(4)
       .box
-        background url('/static/fourthgirl.png') 101% center no-repeat
+        background url('/static/girls/4.png') right center no-repeat
     .text
       max-width 65%
       margin-bottom 0
@@ -125,16 +127,16 @@ import card from './modals/card'
           padding-bottom 0rem
       &:nth-child(1)
         .box
-          background url('/static/1024/girlone.png') 90% -5% no-repeat
+          background url('/static/1024/1.png') right center no-repeat
       &:nth-child(2)
         .box
-          background url('/static/1024/girltwo.png') 103% -5% no-repeat
+          background url('/static/1024/2.png') right center no-repeat
       &:nth-child(3)
         .box
-          background url('/static/1024/girlthree.png') 100% -5% no-repeat
+          background url('/static/1024/3.png') right center no-repeat
       &:nth-child(4)
         .box
-          background url('/static/1024/girlfour.png') 101% -5% no-repeat
+          background url('/static/1024/4.png') right center no-repeat
 
 @media (max-width 600px)
   .clothesBG

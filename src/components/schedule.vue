@@ -48,12 +48,18 @@
 
 @media (max-width 1024px)
   .layoutContainer
+    max-width 800px
     img
       margin-left 3rem
     h3
       font-size 1rem
     p
       font-size .9rem !important
+
+
+@media (max-width 700px)
+  .layoutContainer
+    max-width 500px
 
 @media (max-width 550px)
   .layoutContainer
