@@ -20,7 +20,6 @@
   background-image url('/static/bannerbg.png')
   height 90vh
   background-position right center
-  // position relative
   overflow hidden
   .banner
     min-height inherit
@@ -75,6 +74,10 @@
     max-width 420px
   .text
     margin-right 2rem
+
+@media (max-width: 1024px)
+  .bannerContainer
+    background url('/static/bannerbg2.png') no-repeat center center
 
 @media (max-width 480px)
   .bannerContainer

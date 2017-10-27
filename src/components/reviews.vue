@@ -24,13 +24,17 @@
 </script>
 
 <style scoped lang="stylus">
+.container
+  min-height 520px
 .carousel
   height 300px
   box-shadow none
   &__item
-    transition .8s ease
+    transition 1.1s linear
 
 @media (max-width 700px)
+  .container
+    min-height 400px
   .carousel
     height 200px
 

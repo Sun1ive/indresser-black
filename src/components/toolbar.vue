@@ -33,7 +33,7 @@
       </v-toolbar-items>
       <v-toolbar-side-icon class="white--text hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
-    <v-dialog ref="catalog" max-width="60vh" v-model="isVisisbleCatalog">
+    <v-dialog ref="catalog" max-width="380" v-model="isVisisbleCatalog">
       <app-catalog></app-catalog>
     </v-dialog>
   </header>

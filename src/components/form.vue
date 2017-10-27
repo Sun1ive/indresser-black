@@ -49,11 +49,12 @@
 
 
 @media (max-width: 400px)
+  .formContainer
+    h2
+      font-size 1.5rem
   .form
     max-width 280px
     min-width 280px
-  h2
-    font-size 1.5rem
-    textarea
-      min-width 280px
+
+
 </style>

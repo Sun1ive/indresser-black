@@ -25,7 +25,8 @@ export default {
     'app-main': main,
     'app-footer': footer,
     'app-scrolltop': scrolltop,
-  }
+  },
+  mounted ()
 }
 </script>
 
@@ -37,6 +38,4 @@ body
 
 .container
   padding 0
-
-
 </style>

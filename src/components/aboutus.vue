@@ -50,4 +50,9 @@
       font-size 1.2rem
       margin-bottom 0
       margin 0 1rem
+
+@media (max-width 370px)
+  .container
+    min-height 500px
+
 </style>
