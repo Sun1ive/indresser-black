@@ -5,10 +5,7 @@
     </v-layout>
     <v-layout justify-center class="layoutContainer">
       <v-carousel ref="slider" hide-controls>
-        <v-carousel-item src="/static/test/1.png"></v-carousel-item>
-        <v-carousel-item src="/static/lowres/testslide.png"></v-carousel-item>
-        <v-carousel-item src="/static/slide1.png"></v-carousel-item>
-        <v-carousel-item src="/static/slide1.png"></v-carousel-item>
+        <v-carousel-item v-for="(item, i) in reviews" :src="item" :key="i"></v-carousel-item>
       </v-carousel>
     </v-layout>
   </v-container>
@@ -16,9 +13,12 @@
 
 <script>
   export default {
-    mounted () {
-      let slider =  this.$refs.slider.$el;
-      console.log(slider);
+    data () {
+      return {
+        reviews: [
+          '/static/reviews/1.png', '/static/reviews/2.png', '/static/reviews/3.png'
+        ]
+      }
     }
   }
 </script>
@@ -29,6 +29,10 @@
   box-shadow none
   &__item
     transition .8s ease
+
+@media (max-width 700px)
+  .carousel
+    height 200px
 
 @media (max-width: 470px)
   .carousel

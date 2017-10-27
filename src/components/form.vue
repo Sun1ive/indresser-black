@@ -4,7 +4,7 @@
       <h2 class="darkgrey">Свяжитесь с нами</h2>
     </v-layout>
     <v-layout justify-center align-center class="layoutContainer">
-      <form class="form" action="">
+      <form class="form" method="POST" action="">
         <input required name="user_name" class="inputtext" type="text" placeholder="Имя">
         <input required name="user_email" class="inputtext" type="email" placeholder="e-mail">
         <input required name="user_text" type="text" placeholder="Тема">
