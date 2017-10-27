@@ -10,7 +10,7 @@
     </v-layout>
     <v-layout>
       <v-carousel hide-controls>
-        <v-carousel-item v-for="(item, i) in gallery" :key="i" :src="item.img"></v-carousel-item>
+        <v-carousel-item v-for="(item, i) in currentItem.gallery" :key="i" :src="item"></v-carousel-item>
       </v-carousel>
     </v-layout>
     <v-layout justify-center class="py-3">
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { gallery } from '../store/index'
+// import { gallery } from '../store/index'
 import catalogForm from './catalogForm'
 import offerCall from './offerCall'
 
@@ -43,7 +43,7 @@ export default {
   data () {
     return {
       isVisibleCatalog: false,
-      isVisibleOfferCall: false
+      isVisibleOfferCall: false,
     }
   },
   methods: {
@@ -64,9 +64,9 @@ export default {
     }
   },
   computed: {
-    gallery () {
-      return gallery
-    }
+    // gallery () {
+    //   return gallery
+    // }
   }
 }
 </script>
