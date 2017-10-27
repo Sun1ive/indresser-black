@@ -13,11 +13,6 @@
 </v-container>
 </template>
 
-<script>
-  export default {
-    
-  }
-</script>
 
 <style scoped lang="stylus">
 @import '/form.styl'

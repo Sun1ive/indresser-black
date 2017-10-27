@@ -12,10 +12,10 @@
         let scroll = document.querySelector('.scrolltop');
         if (offset >= 300 && !scroll.classList.contains('visible')) {
           scroll.classList.add('visible')
-          console.log(1);
+          // console.log(1);
         } else if (offset <= 300 && scroll.classList.contains('visible')) {
           scroll.classList.remove('visible')
-          console.log(2);
+          // console.log(2);
         }
       },
       scrollToTop () {

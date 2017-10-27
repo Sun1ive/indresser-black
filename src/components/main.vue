@@ -33,7 +33,7 @@
       <app-reviews></app-reviews>
     </section>
     <!-- form -->
-    <section class="form">
+    <section class="request">
       <app-form></app-form>
     </section>
     <!-- schedule -->

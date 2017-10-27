@@ -6,9 +6,7 @@ import {
   Vuetify,
   VApp,
   VNavigationDrawer,
-  // VFooter,
   VList,
-  // VBtn,
   VIcon,
   VGrid,
   VToolbar,
@@ -22,9 +20,7 @@ Vue.use(Vuetify, {
   components: {
     VApp,
     VNavigationDrawer,
-    // VFooter,
     VList,
-    // VBtn,
     VIcon,
     VGrid,
     VToolbar,
@@ -37,9 +33,9 @@ Vue.use(Vuetify, {
 Vue.use(VueScroll, {
   container: 'body',
   duration: 500,
-  offset: 0,
+  offset: -100,
   cancelable: true,
-  easing: 'ease'
+  easing: 'linear'
 });
 
 new Vue({

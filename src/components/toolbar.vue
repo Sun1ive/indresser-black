@@ -9,17 +9,17 @@
       <v-list>
         <v-divider></v-divider>
         <v-list-tile v-for="item in toolbarMenu" :key="item.title" @click="">
-          <v-list-tile-action>
+          <!-- <v-list-tile-action>
             <v-icon medium class="red--text">{{ item.icon }}</v-icon>
-          </v-list-tile-action>
+          </v-list-tile-action> -->
           <v-list-tile-content @click.stop="drawer = false" v-scroll-to="item.scrollTo">
             <v-list-tile-title>{{ item.title }}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile @click="">
-          <v-list-tile-action>
+          <!-- <v-list-tile-action>
             <v-icon medium class="red--text">menu</v-icon>
-          </v-list-tile-action>
+          </v-list-tile-action> -->
           <v-list-tile-content @click.stop="drawer = false">
             <v-list-tile-title>Свернуть</v-list-tile-title>
           </v-list-tile-content>
@@ -27,27 +27,36 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar ref="toolbar" height="73px">
-      <div class="myBtn"></div>
       <v-toolbar-items class="hidden-xs-only">
+        <button class="myBtn" @click.stop="showCatalog">Получить весь каталог</button>
         <a href="#" v-for="(item, i) in toolbarMenu" :key="i" v-scroll-to="item.scroll">{{ item.title }}</a>
       </v-toolbar-items>
       <v-toolbar-side-icon class="white--text hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
+    <v-dialog ref="catalog" max-width="60vh" v-model="isVisisbleCatalog">
+      <app-catalog></app-catalog>
+    </v-dialog>
   </header>
 </template>
 
 <script>
+import catalog from './modals/catalogForm'
+
   export default {
+    components: {
+      'app-catalog': catalog
+    },
     data () {
       return {
         drawer: false,
+        isVisisbleCatalog: false,
         toolbarMenu: [
           { title: 'Главная', icon: 'star', scroll: '.header' },
-          { title: 'Преимущества', icon: 'star', scroll: '.clothes' },
-          { title: 'О Нас', icon: 'star', scroll: '.header' },
-          { title: 'Условия', icon: 'star', scroll: '.header' },
-          { title: 'Отзывы', icon: 'star', scroll: '.header' },
-          { title: 'Контакты', icon: 'star', scroll: '.header' },
+          { title: 'Преимущества', icon: 'star', scroll: '.pains' },
+          { title: 'О Нас', icon: 'star', scroll: '.aboutus' },
+          { title: 'Условия', icon: 'star', scroll: '.work' },
+          { title: 'Отзывы', icon: 'star', scroll: '.reviews' },
+          { title: 'Контакты', icon: 'star', scroll: '.request' },
         ]
       }
     },
@@ -60,6 +69,11 @@
         } else if ( offset <= 250 && toolbar.classList.contains('fixed')) {
           toolbar.classList.remove('fixed');
         }
+      },
+      showCatalog () {
+        this.isVisisbleCatalog = true
+        let dialog = this.$refs.catalog.$refs.content.style;
+        if (dialog.justifyContent === '') { dialog.justifyContent = 'center' }
       }
     },
     created () {
@@ -108,8 +122,8 @@
 
 .toolbar__items
   width 100%
-  justify-content center
   align-items center
+  justify-content center
   min-width 800px
   a
     text-decoration none
@@ -124,8 +138,9 @@
 
 .myBtn
   background-color: #917438
+  color #fff
   width 100%
-  max-width 450px
+  max-width 300px
   margin-bottom: 0
   padding .4rem 0
   border-radius: 6px
