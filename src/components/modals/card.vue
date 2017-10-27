@@ -1,7 +1,7 @@
 <template>
   <v-container class="modal">
     <v-layout column justify-center align-center>
-      <h2 class="mb-0 text-xs-left">{{ currentItem.title }} </h2>
+      <h2 class="mb-0 text-xs-left head">{{ currentItem.title }} </h2>
       <p class="mb-0">{{ currentItem.desc }}</p>
       <button class="myBtn" @click.stop="showOfferCall">Получить консультацию</button>
     </v-layout>

@@ -11,7 +11,7 @@
         </div>
       </v-flex>
     </v-layout>
-    <v-dialog ref="dialog" max-width="65vh" v-model="isActive">
+    <v-dialog lazy ref="dialog" max-width="85vh" v-model="isActive">
       <app-card :currentItem="currentItem" @closeModal="closeModal"></app-card>
     </v-dialog>
   </v-container>
@@ -37,16 +37,22 @@ import card from './modals/card'
     },
     methods: {
       showModal (item) {
+        let dialog = this.$refs.dialog.$refs.dialog;
+        let width = window.innerWidth;
+        if (width <= 500) {
+          // dialog.style.minWidth = '500px';
+          // console.log(dialog.style.margin);
+          dialog.style.margin = '0'
+        } else {
+          // dialog.style.minWidth = 'auto'
+          console.log(2);
+        }
         this.currentItem = item
         this.isActive = true
       },
       closeModal () {
         this.isActive = false
       }
-    },
-    mounted () {
-       let dialog = this.$refs.dialog.$refs.dialog;
-       dialog.style.minWidth = '500px';
     }
   }
 </script>

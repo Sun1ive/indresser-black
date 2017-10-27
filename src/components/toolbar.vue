@@ -87,6 +87,11 @@
   opacity .4
   animation fade 1.3s ease
   transition .4s ease
+  a
+    transition .4s linear
+    &:hover
+      transition .4s linear
+      color #ED272A
   &:hover
     transition .4s ease
     opacity  1

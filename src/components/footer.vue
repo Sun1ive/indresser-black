@@ -41,6 +41,10 @@
     a
       color #fff
       font-size 2.5rem
+      transition .4s linear
+      &:hover
+        color #ED272A
+        transition .4s linear
 
 @media (max-width 400px)
   .socials
