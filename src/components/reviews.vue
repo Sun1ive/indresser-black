@@ -40,4 +40,7 @@
     height 185px
     &__item
       background-size contain
+  h2
+    padding 3rem 0
+    font-size 1.5rem
 </style>

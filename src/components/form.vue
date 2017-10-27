@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="formContainer">
     <v-layout justify-center>
-      <h2 class="darkgrey">Свяжитесь с нами</h2>
+      <h2 class="darkgrey text-xs-center">Свяжитесь с нами</h2>
     </v-layout>
     <v-layout justify-center align-center class="layoutContainer">
       <form class="form" method="POST" action="/static/php/form.php">
@@ -47,15 +47,17 @@
 @media (max-width: 600px)
   .form
     margin 0 1rem
+    max-width 400px
     min-width 400px
-    .inputtext
-      width 100%
-      min-width 100%
 
-@media (max-width 360px)
+
+@media (max-width: 400px)
   .form
+    max-width 280px
     min-width 280px
-    h2
-      text-align center
-      font-size 1.5rem
+  h2
+    font-size 1.5rem
+    .inputtext
+    textarea
+      min-width 280px
 </style>

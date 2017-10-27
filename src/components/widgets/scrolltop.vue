@@ -12,10 +12,8 @@
         let scroll = document.querySelector('.scrolltop');
         if (offset >= 300 && !scroll.classList.contains('visible')) {
           scroll.classList.add('visible')
-          // console.log(1);
         } else if (offset <= 300 && scroll.classList.contains('visible')) {
           scroll.classList.remove('visible')
-          // console.log(2);
         }
       },
       scrollToTop () {
@@ -33,8 +31,8 @@
 
 <style scoped lang='stylus'>
 .scrolltop
-  width 60px
-  height 60px
+  width 70px
+  height 70px
   background-color #fff
   border 1px solid #c0c0c0
   position fixed

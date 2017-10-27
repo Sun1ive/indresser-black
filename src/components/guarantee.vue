@@ -49,7 +49,7 @@
 
 @media (max-width 670px)
   .container
-    min-height 300px
+    min-height 410px
     .iconText
       font-size 1.1rem
     h2

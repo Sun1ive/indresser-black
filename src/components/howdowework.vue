@@ -106,6 +106,7 @@ export default {
       padding-bottom: 1rem !important;
     h2 
       font-size: 1.5rem;
+      padding 3rem 0
     p 
       font-size: 1.2rem !important;
     a 

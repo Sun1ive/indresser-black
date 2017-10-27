@@ -41,9 +41,12 @@
         color #ED272A
         transition .4s linear
 
-@media (max-width 400px)
+@media (max-width 420px)
   .socials
+    justify-content center
     li
       a
         font-size 2rem
+
+
 </style>

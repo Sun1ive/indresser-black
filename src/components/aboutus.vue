@@ -38,14 +38,16 @@
     p
       font-size 1.2rem
 
-@media (max-width: 480px)
+@media (max-width: 450px)
   .container
+    min-height 460px
     h2
       padding 1rem 0
+      font-size 1.5rem
   .layoutContainer
     max-width 380px
     p
-      font-size 1.1rem
+      font-size 1.2rem
       margin-bottom 0
       margin 0 1rem
 </style>

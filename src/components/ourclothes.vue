@@ -94,16 +94,10 @@ import card from './modals/card'
     methods: {
       showModal (item) {
         this.currentItem = item
-        console.log(this.currentItem);
         let dialog = this.$refs.dialog.$refs.dialog;
         let width = window.innerWidth;
         if (width <= 500) {
-          // dialog.style.minWidth = '500px';
-          // console.log(dialog.style.margin);
           dialog.style.margin = '0'
-        } else {
-          // dialog.style.minWidth = 'auto'
-          console.log(2);
         }
         this.currentItem = item
         this.isActive = true
