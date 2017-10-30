@@ -16,84 +16,109 @@
 
 
 <style scoped lang="stylus">
-.bannerContainer
-  background-image url('/static/bannerbg.png')
-  height 90vh
-  background-position right center
-  overflow hidden
-  .banner
-    min-height inherit
-    max-width 1400px
-    min-height 80vh
-    margin 0 auto
-    img
-      width: 100%
-      max-width 722px
-      height 117px
+.bannerContainer {
+  background-image: url('/static/bannerbg.png');
+  height: 90vh;
+  background-position: right center;
+  overflow: hidden;
 
-.arrowDown
-  position absolute
-  bottom 10%
-  left 50%
-  transform translateX(-50%)
-  i
-    font-size 8rem
-    color #c0c0c0
-    animation cool 2s linear alternate infinite
-    cursor pointer
+  .banner {
+    min-height: inherit;
+    max-width: 1400px;
+    min-height: 80vh;
+    margin: 0 auto;
 
-@keyframes cool {
-  from {
-    transform translateY(-10px)
-    opacity .3
-  } to {
-    transform translateY(10px)
-    opacity 1
+    img {
+      width: 100%;
+      max-width: 722px;
+      height: 117px;
+    }
   }
 }
 
-.text
-  max-width 1400px
-  margin 0 auto
-.blackText
-  max-width 562px
-  min-height 40px
-  background-color #2b2a29
-  text-transform uppercase
-  display flex
-  justify-content center
-  align-items center
-  font-family 'OpenSans-Semibold', Arial, Helvetica, sans-serif
-  color #fff
-  font-size 2.4rem
+.arrowDown {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 
+  i {
+    font-size: 8rem;
+    color: #c0c0c0;
+    -webkit-animation: cool 2s linear alternate infinite;
+            animation: cool 2s linear alternate infinite;
+    cursor: pointer;
+  }
+}
 
-@media (max-width 1400px)
-  .blackText
-    font-size 1.8rem
-    max-width 420px
-  .text
-    margin-right 2rem
+@-webkit-keyframes cool {
+  from {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0.3;
+  }
 
-@media (max-width: 1024px)
-  .bannerContainer
-    background url('/static/bannerbg2.png') no-repeat center center
+  to {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 1;
+  }
+}
 
-@media (max-width 480px)
-  .bannerContainer
-    background url('/static/480/480banner.png') no-repeat center center
-    .text
-      justify-content center
-      margin-right 0
-    .blackText
-      font-size 1.4rem
-      max-width 340px
-    img
-      display none
-@media (max-width 400px)
-  .bannerContainer
-    background url('/static/320/320logobanner.png') no-repeat center center
-    .blackText
-      font-size 1rem
-      max-width 250px
+@keyframes cool {
+  from {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0.3;
+  }
+
+  to {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+.text {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.blackText {
+  max-width: 562px;
+  min-height: 40px;
+  background-color: #2b2a29;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'OpenSans-Semibold', Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+@media (max-width: 1400px) {
+  .blackText {
+    font-size: 1.8rem;
+    max-width: 420px;
+  }
+
+  .text {
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bannerContainer {
+    background: url('/static/bannerbg2.png') no-repeat center center;
+  }
+}
 </style>

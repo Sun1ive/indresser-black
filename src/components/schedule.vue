@@ -5,15 +5,10 @@
         <img src="/static/schedule.png" style="width:100%" alt="logo">
       </v-flex>
       <v-flex xs10 sm6 md4 class="flexschedule">
-<!--         <div class="text-xs-right">
-          <h3>Адрес</h3>
-          <p>г.Винница, ул. Николая Оводова, 51</p>
-          <p>Главный офис</p>
-        </div> -->
         <div class="boxText text-xs-right">
           <h3>Контакты</h3>
           <p>Телефон: 098-02-02-092</p>
-          <p>Факс: 073-02-02-090</p>
+          <p>073-02-02-090</p>
           <p>Email: info@indresser.com</p>
         </div>
         <div class="boxText text-xs-right">
