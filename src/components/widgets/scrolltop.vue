@@ -66,4 +66,11 @@
     transform translateY(5px)
   }
 }
+
+@media (max-width 400px)
+  .scrolltop
+    height 65px
+    width 65px
+  .visible
+    bottom 10%
 </style>

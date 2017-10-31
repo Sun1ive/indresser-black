@@ -1,7 +1,7 @@
 <template>
   <v-container class="clothesBG" fluid>
     <v-layout class="head" justify-center align-center>
-      <h2 class="mb-0">Самые популярные модели</h2>
+      <h2 class="mb-0">Выбери себе платье</h2>
     </v-layout>
     <v-layout justify-center row wrap align-center class="layoutContainer">
       <v-flex xs12 sm5 class="wrapper" v-for="(item,i) in items" :key="i" @click.stop="showModal(item)">
@@ -11,7 +11,7 @@
         </div>
       </v-flex>
     </v-layout>
-    <v-dialog lazy ref="dialog" max-width="85vh" v-model="isActive">
+    <v-dialog lazy ref="dialog" max-width="650" v-model="isActive">
       <app-card :currentItem="currentItem" @closeModal="closeModal"></app-card>
     </v-dialog>
   </v-container>

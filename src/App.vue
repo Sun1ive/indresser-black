@@ -9,6 +9,9 @@
 
     <!-- widgets -->
     <app-scrolltop></app-scrolltop>
+    <v-dialog ref="stock" v-model="stock" max-width="600">
+      <app-stock></app-stock>
+    </v-dialog>
   </v-app>
 </template>
 
@@ -17,6 +20,7 @@ import toolbar from './components/toolbar'
 import main from './components/main'
 import footer from './components/footer'
 import scrolltop from './components/widgets/scrolltop'
+import stock from './components/modals/stock'
 
 
 export default {
@@ -25,7 +29,20 @@ export default {
     'app-main': main,
     'app-footer': footer,
     'app-scrolltop': scrolltop,
+    'app-stock': stock,
   },
+  data () {
+    return {
+      stock: false
+    }
+  },
+  mounted () {
+    console.log(this.$refs.stock.$refs.dialog.style.justifyContent);
+    setTimeout (() => {
+      this.$refs.stock.$refs.content.style.justifyContent = 'center'
+      this.stock = true
+    }, 1000)
+  }
 }
 </script>
 

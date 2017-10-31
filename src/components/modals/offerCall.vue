@@ -1,7 +1,7 @@
 <template>
 <v-container fluid class="formContainer">
   <v-layout justify-center>
-    <h3 class="text-xs-center">Получить консультацию</h3>
+    <h3 class="text-xs-center">Получить консультацию и заказать</h3>
   </v-layout>
   <v-layout justify-center>
     <form class="callForm" method="POST" action="/static/php/mail.php">

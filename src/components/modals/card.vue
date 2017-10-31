@@ -3,7 +3,7 @@
     <v-layout column justify-center align-center>
       <h2 class="mb-0 text-xs-center text-sm-left head">{{ currentItem.title }} </h2>
       <p class="mb-0">{{ currentItem.desc }}</p>
-      <button class="myBtn" @click.stop="showOfferCall">Получить консультацию</button>
+      <button class="myBtn" @click.stop="showOfferCall">Получить консультацию и заказать</button>
     </v-layout>
     <v-layout justify-center>
       <h2>Топ продаж</h2>
@@ -18,7 +18,7 @@
     </v-layout>
     <div class="close" @click.stop="closeModal"></div>
 
-    <v-dialog ref="offercall" max-width="70vh" v-model="isVisibleOfferCall">
+    <v-dialog ref="offercall" max-width="500px" v-model="isVisibleOfferCall">
       <app-offercall></app-offercall>
     </v-dialog>
 
