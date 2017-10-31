@@ -14,12 +14,17 @@
         <button class="myBtn" type="submit">Отправить</button>
       </form>
     </v-layout>
+    <div class="close" @click="close"></div>
   </v-container>
 </template>
 
 <script>
   export default {
-    
+    methods: {
+      close () {
+        this.$emit('close')
+      }
+    }
   }
 </script>
 
@@ -28,6 +33,27 @@
   background-color #fff
   min-height 300px
   border-radius 8px
+  position relative
+  .close
+    position absolute
+    right 5px
+    top 5px
+    width 30px
+    height 30px
+    border-radius 50%
+    border 1px solid #333
+    cursor pointer
+    transition .4s linear
+    &:after
+      position absolute
+      content 'X'
+      top 50%
+      left 50%
+      transform translate(-50%,-50%)
+      font-size 1.2rem
+    &:hover
+      color #fff
+      background-color #000
   .white
     min-height 50px
     background-color #fff

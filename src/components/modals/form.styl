@@ -19,14 +19,17 @@ input
   background-color #fff
   min-height 40px
   padding-left 1rem
+  width 100%
 .myBtn
   background-color #FF2226
   min-height 40px
   min-width 100px
   border-radius 6px
   font-size: 1.3rem
+  padding: 0 1rem
   margin-bottom 0
   color #fff
+  width 100%
 
 .callForm
   display: flex
@@ -45,6 +48,10 @@ input
   .myBtn
     font-size: 1rem
 @media (max-width: 420px)
+  .form
+    flex-direction: column
+    width 100%
   .formContainer
     h3
       font-size: 1.2rem
+      line-height: 1.5rem

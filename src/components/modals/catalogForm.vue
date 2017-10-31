@@ -15,4 +15,7 @@
 
 <style scoped lang="stylus">
 @import '/form.styl'
+  input
+    margin-right 1rem
+    padding-left 0.5rem
 </style>

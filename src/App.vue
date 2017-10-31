@@ -10,7 +10,7 @@
     <!-- widgets -->
     <app-scrolltop></app-scrolltop>
     <v-dialog ref="stock" v-model="stock" max-width="600">
-      <app-stock></app-stock>
+      <app-stock @close="close"></app-stock>
     </v-dialog>
   </v-app>
 </template>
@@ -34,6 +34,11 @@ export default {
   data () {
     return {
       stock: false
+    }
+  },
+  methods: {
+    close () {
+      this.stock = false
     }
   },
   mounted () {
