@@ -8,9 +8,9 @@
     </v-layout>
     <v-layout column class="discount" justify-center align-center>
       <p class="first">Первые 100 покупалетлей получат скидку в 100 грн</p>
-      <form action="" method="POST" class="form">
+      <form action="/static/php/discount.php" method="POST" class="form">
         <input name="name" type="text" placeholder="Ваше имя" required>
-        <input name="email" type="text" placeholder="Ваш e-mail" required>
+        <input name="phone" type="phone" placeholder="Ваш телефон" required>
         <button class="myBtn" type="submit">Отправить</button>
       </form>
     </v-layout>
@@ -115,9 +115,10 @@
         font-size 1rem
         padding 1rem 0
         margin-bottom 0
-@media (max-width: 400px)
+@media (max-width: 420px)
   .stock
     .discount
       .first
         text-align center
+        font-size 0.9rem
 </style>

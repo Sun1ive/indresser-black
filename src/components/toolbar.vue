@@ -9,17 +9,11 @@
       <v-list>
         <v-divider></v-divider>
         <v-list-tile v-for="item in toolbarMenu" :key="item.title" @click="">
-          <!-- <v-list-tile-action>
-            <v-icon medium class="red--text">{{ item.icon }}</v-icon>
-          </v-list-tile-action> -->
           <v-list-tile-content @click.stop="drawer = false" v-scroll-to="item.scroll">
             <v-list-tile-title>{{ item.title }}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile @click="">
-          <!-- <v-list-tile-action>
-            <v-icon medium class="red--text">menu</v-icon>
-          </v-list-tile-action> -->
           <v-list-tile-content @click.stop="drawer = false">
             <v-list-tile-title>Свернуть</v-list-tile-title>
           </v-list-tile-content>
@@ -129,7 +123,7 @@ import catalog from './modals/catalogForm'
     text-decoration none
     text-transform uppercase
     color #fff
-    margin 0 2rem
+    margin 0 1.5rem
     font-family 'OpenSans-Semibold', Arial, Helvetica, sans-serif
 
 @media (max-width 960px)
