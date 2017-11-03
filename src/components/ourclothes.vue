@@ -7,7 +7,7 @@
       <v-flex xs12 sm5 class="wrapper" v-for="(item,i) in items" :key="i" @click.stop="showModal(item)">
         <div class="box">
           <p class="text">{{ item.title }}</p>
-          <div class="details">подробнее</div>
+          <div class="details"><span>подробнее</span></div>
         </div>
       </v-flex>
     </v-layout>
@@ -172,20 +172,24 @@ export default {
         transition: 0.4s ease;
 
         .details {
-          -webkit-transition: 0.4s linear;
-          -o-transition: 0.4s linear;
-          transition: 0.4s linear;
+          transition: 0.2s linear;
           color: red;
-          text-shadow: 1px 1px 1px #333;
+        }
+        span {
+          transition .8s ease
+          border-bottom 1px solid red
+          width 100%
         }
       }
 
       .details {
-        -webkit-transition: 0.4s linear;
-        -o-transition: 0.4s linear;
-        transition: 0.4s linear;
+        transition: 0.2s linear;
         font-size: 1.85rem;
         padding-bottom: 2rem;
+      }
+      span {
+        border-bottom 1px solid transparent
+        transition .8s ease
       }
     }
 

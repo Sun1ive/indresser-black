@@ -7,7 +7,7 @@
       </v-flex>
     </v-layout>
     <v-layout column class="discount" justify-center align-center>
-      <p class="first">Первые 100 покупалетлей получат скидку в 100 грн</p>
+      <p class="first">Первые 100 покупателей получат скидку в 100 грн</p>
       <form action="/static/php/discount.php" method="POST" class="form">
         <input name="name" type="text" placeholder="Ваше имя" required>
         <input name="phone" type="phone" placeholder="Ваш телефон" required>
