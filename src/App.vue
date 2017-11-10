@@ -45,7 +45,7 @@ export default {
     setTimeout (() => {
       this.$refs.stock.$refs.content.style.justifyContent = 'center'
       this.stock = true
-    }, 1000)
+    }, 15000)
   }
 }
 </script>

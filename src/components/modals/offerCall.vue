@@ -40,8 +40,8 @@ export default {
       if (validate.test(this.userData.phone)) {
         Email.send(
           `coats@indresser.com`,
-          // 'info@indresser.com',
-          'sunliveua@gmail.com',
+          'info@indresser.com',
+          // 'sunliveua@gmail.com',
           'Заказ звонка с сайта dresses.indresser.com',
           `Пользователь: ${this.userData.name},
           Телефон: ${this.userData.phone}`,

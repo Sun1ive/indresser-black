@@ -41,8 +41,8 @@ export default {
     feedback() {
       Email.send(
         `coats@indresser.com`,
-        // 'info@indresser.com',
-        'sunliveua@gmail.com',
+        'info@indresser.com',
+        // 'sunliveua@gmail.com',
         'Заявка с формы обратной связи сайта dresses.indresser.com',
         `Пользователь: ${this.userData.name},
         e-mail: ${this.userData.email},

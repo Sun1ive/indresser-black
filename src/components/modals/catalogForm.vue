@@ -29,8 +29,8 @@ export default {
     goToCatalog() {
       Email.send(
         `coats@indresser.com`,
-        // 'info@indresser.com',
-        'sunliveua@gmail.com',
+        'info@indresser.com',
+        // 'sunliveua@gmail.com',
         'Перешел на каталог с dresses.indresser.com',
         `Пользователь: ${this.userData.email}
         Перешел на каталог`,
