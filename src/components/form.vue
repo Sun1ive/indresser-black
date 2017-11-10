@@ -12,23 +12,33 @@
         <button type="submit">Отправить</button>
       </form>
     </v-layout>
+
+    <v-dialog ref="thanks" v-model="drawer" max-width="500">
+      <app-thanks @closeThanks="closeThanks"></app-thanks>
+    </v-dialog>
   </v-container>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        userData: {
-          name: '',
-          email: '',
-          topic: '',
-          message: ''
-        }
+import thanks from './modals/thanks';
+
+export default {
+  components: {
+    'app-thanks': thanks
+  },
+  data() {
+    return {
+      drawer: false,
+      userData: {
+        name: '',
+        email: '',
+        topic: '',
+        message: ''
       }
-    },
-    methods: {
-      feedback() {
+    };
+  },
+  methods: {
+    feedback() {
       Email.send(
         `coats@indresser.com`,
         // 'info@indresser.com',
@@ -46,11 +56,22 @@
         name: '',
         email: '',
         topic: '',
-        message: '',
+        message: ''
+      };
+      let vm = this;
+      function showThanks() {
+        vm.drawer = true;
+        if (vm.$refs.thanks.$refs.content.style.justifyContent !== 'center') {
+          vm.$refs.thanks.$refs.content.style.justifyContent = 'center';
         }
       }
+      showThanks();
+    },
+    closeThanks() {
+      this.drawer = false;
     }
   }
+};
 </script>
 
 
