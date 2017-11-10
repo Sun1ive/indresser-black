@@ -15,13 +15,23 @@
       </form>
     </v-layout>
     <div class="close" @click="close"></div>
+
+    <v-dialog ref="thanks" v-model="drawer" max-width="500">
+      <app-thanks @closeThanks="closeThanks"></app-thanks>
+    </v-dialog>
   </v-container>
 </template>
 
 <script>
+import thanks from './thanks'
+
   export default {
+    components: {
+      'app-thanks': thanks,
+    },
     data() {
       return {
+        drawer: false,
         userData: {
           name: '',
           phone: ''
@@ -50,11 +60,21 @@
           name: '',
           phone: ''
         };
+        this.showThanks();
         this.$emit('close');
       } else {
         alert('Введите корректный телефон');
         this.userData.phone = '';
       }
+      },
+      closeThanks() {
+        this.drawer = false;
+      },
+      showThanks() {
+        this.drawer = true;
+        if (this.$refs.thanks.$refs.content.style.justifyContent !== 'center') {
+          this.$refs.thanks.$refs.content.style.justifyContent = 'center';
+        }
       }
     }
   }
