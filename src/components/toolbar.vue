@@ -28,7 +28,7 @@
       <v-toolbar-side-icon class="white--text hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
     <v-dialog ref="catalog" max-width="380" v-model="isVisisbleCatalog">
-      <app-catalog></app-catalog>
+      <app-catalog @closeForm="closeForm"></app-catalog>
     </v-dialog>
   </header>
 </template>
@@ -68,6 +68,9 @@ import catalog from './modals/catalogForm'
         this.isVisisbleCatalog = true
         let dialog = this.$refs.catalog.$refs.content.style;
         if (dialog.justifyContent === '') { dialog.justifyContent = 'center' }
+      },
+      closeForm() {
+        this.isVisisbleCatalog = false;
       }
     },
     created () {
