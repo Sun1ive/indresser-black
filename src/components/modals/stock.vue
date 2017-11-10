@@ -8,9 +8,9 @@
     </v-layout>
     <v-layout column class="discount" justify-center align-center>
       <p class="first">Первые 100 покупателей получат скидку в 100 грн</p>
-      <form action="/static/php/discount.php" method="POST" class="form">
-        <input name="name" type="text" placeholder="Ваше имя" required>
-        <input name="phone" type="phone" placeholder="Ваш телефон" required>
+      <form class="form" @submit.prevent="getStock">
+        <input type="text" v-model="userData.name" placeholder="Ваше имя" required>
+        <input type="text" v-model="userData.phone" placeholder="Ваш телефон" required>
         <button class="myBtn" type="submit">Отправить</button>
       </form>
     </v-layout>
@@ -20,9 +20,41 @@
 
 <script>
   export default {
+    data() {
+      return {
+        userData: {
+          name: '',
+          phone: ''
+        }
+      }
+    },
     methods: {
       close () {
         this.$emit('close')
+      },
+      getStock() {
+        let validate = new RegExp('^[0-9]+$');
+      if (validate.test(this.userData.phone)) {
+        Email.send(
+          `coats@indresser.com`,
+          // 'info@indresser.com',
+          'sunliveua@gmail.com',
+          'Заказ скидки с сайта dresses.indresser.com',
+          `Пользователь: ${this.userData.name},
+          Телефон: ${this.userData.phone}`,
+          'mail.adm.tools',
+          'coats@indresser.com',
+          '3DLao3x1AC8t'
+        );
+        this.userData = {
+          name: '',
+          phone: ''
+        };
+        this.$emit('close');
+      } else {
+        alert('Введите корректный телефон');
+        this.userData.phone = '';
+      }
       }
     }
   }
