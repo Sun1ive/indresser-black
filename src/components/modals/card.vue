@@ -23,7 +23,7 @@
     </v-dialog>
 
     <v-dialog ref="catalog" max-width="380px" v-model="isVisibleCatalog">
-      <app-catalogform></app-catalogform>
+      <app-catalogform @closeForm="closeCatalogForm"></app-catalogform>
     </v-dialog>
   </v-container>
 </template>
@@ -66,6 +66,9 @@ export default {
     },
     closeForm() {
       this.isVisibleOfferCall = false;
+    },
+    closeCatalogForm() {
+      this.isVisibleCatalog = false;
     }
   }
 };

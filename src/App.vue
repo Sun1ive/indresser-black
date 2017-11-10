@@ -42,7 +42,6 @@ export default {
     }
   },
   mounted () {
-    console.log(this.$refs.stock.$refs.dialog.style.justifyContent);
     setTimeout (() => {
       this.$refs.stock.$refs.content.style.justifyContent = 'center'
       this.stock = true
