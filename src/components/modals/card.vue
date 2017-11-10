@@ -19,7 +19,7 @@
     <div class="close" @click.stop="closeModal"></div>
 
     <v-dialog ref="offercall" max-width="500px" v-model="isVisibleOfferCall">
-      <app-offercall></app-offercall>
+      <app-offercall @closeForm="closeForm"></app-offercall>
     </v-dialog>
 
     <v-dialog ref="catalog" max-width="380px" v-model="isVisibleCatalog">
@@ -29,40 +29,46 @@
 </template>
 
 <script>
-import catalogForm from './catalogForm'
-import offerCall from './offerCall'
-
+import catalogForm from './catalogForm';
+import offerCall from './offerCall';
 
 export default {
   props: ['currentItem'],
   components: {
     'app-catalogform': catalogForm,
-    'app-offercall': offerCall,
+    'app-offercall': offerCall
   },
-  data () {
+  data() {
     return {
       isVisibleCatalog: false,
-      isVisibleOfferCall: false,
-    }
+      isVisibleOfferCall: false
+    };
   },
   methods: {
-    closeModal () {
+    closeModal() {
       this.$emit('closeModal');
     },
-    showCatalog () {
+    showCatalog() {
       let dialog = this.$refs.catalog.$refs.content.style;
-      if (dialog.justifyContent === '') { dialog.justifyContent = 'center' }
+      if (dialog.justifyContent === '') {
+        dialog.justifyContent = 'center';
+      }
 
-      this.isVisibleCatalog = true
+      this.isVisibleCatalog = true;
     },
-    showOfferCall () {
+    showOfferCall() {
       let call = this.$refs.offercall.$refs.content.style;
-      if (call.justifyContent === '') { call.justifyContent = 'center' }
+      if (call.justifyContent === '') {
+        call.justifyContent = 'center';
+      }
 
-      this.isVisibleOfferCall = true
+      this.isVisibleOfferCall = true;
+    },
+    closeForm() {
+      this.isVisibleOfferCall = false;
     }
   }
-}
+};
 </script>
 
 <style scoped lang="stylus">

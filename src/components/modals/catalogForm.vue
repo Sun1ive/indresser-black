@@ -33,7 +33,7 @@ export default {
         // 'sunliveua@gmail.com',
         'Перешел на каталог с dresses.indresser.com',
         `Пользователь: ${this.userData.email}
-        \nПерешел на каталог`,
+        Перешел на каталог`,
         'mail.adm.tools',
         'coats@indresser.com',
         '3DLao3x1AC8t'
