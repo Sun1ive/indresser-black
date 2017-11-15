@@ -3,6 +3,7 @@
     <v-layout column justify-center align-center>
       <h2 class="mb-0 text-xs-center text-sm-left head">{{ currentItem.title }} </h2>
       <p class="mb-0">{{ currentItem.desc }}</p>
+      <div class="Price">{{ currentItem.price }} грн</div>
       <button class="myBtn" @click.stop="showOfferCall">Получить консультацию и заказать</button>
     </v-layout>
     <v-layout justify-center>
@@ -33,7 +34,10 @@ import catalogForm from './catalogForm';
 import offerCall from './offerCall';
 
 export default {
-  props: ['currentItem'],
+  props: {
+    currentItem: Object,
+    required: true,
+  },
   components: {
     'app-catalogform': catalogForm,
     'app-offercall': offerCall

@@ -7,7 +7,10 @@
       <v-flex xs12 sm5 class="wrapper" v-for="(item,i) in items" :key="i" @click.stop="showModal(item)">
         <div class="box">
           <p class="text">{{ item.title }}</p>
-          <div class="details"><span>подробнее</span></div>
+          <div class="Info">
+            <div class="details"><span>подробнее...</span></div>
+            <div class="Price">{{ item.price }} грн</div>
+          </div>
         </div>
       </v-flex>
     </v-layout>
@@ -19,6 +22,8 @@
 
 <script>
 import card from './modals/card';
+import items from './store/store'
+
 export default {
   components: {
     'app-card': card
@@ -30,65 +35,7 @@ export default {
         title: '',
         desc: '',
         gallery: ['', '', '', '', '', '', '', '']
-      },
-      items: [
-        {
-          title: `Для тех, кто живет в ритме города и не беспокоится по мелочам`,
-          desc: `Фасон: приталенный силуэт Цвет: розовый, черный Длина: на уровне колена Карманы: нет Рукав: крылышко Платье не на подкладке`,
-          gallery: [
-            '/static/slider/rhytm/1.jpg',
-            '/static/slider/rhytm/2.jpg',
-            '/static/slider/rhytm/3.jpg',
-            '/static/slider/rhytm/4.jpg',
-            '/static/slider/rhytm/5.jpg',
-            '/static/slider/rhytm/6.jpg',
-            '/static/slider/rhytm/7.jpg',
-            '/static/slider/rhytm/8.jpg'
-          ]
-        },
-        {
-          title: `Для деловых девушек которые любят быть в тренде и при этом ценят комфорт`,
-          desc: `Фасон: платье футляр полуприлегающего силуэта Цвет: розово-бордовое, бежево-черное Особенности: Кокетка по полочке и спине. Со шлицей Длина : ниже колена Карманы: есть Платье без подкладки`,
-          gallery: [
-            '/static/slider/office/1.jpg',
-            '/static/slider/office/2.jpg',
-            '/static/slider/office/3.jpg',
-            '/static/slider/office/4.jpg',
-            '/static/slider/office/5.jpg',
-            '/static/slider/office/6.jpg',
-            '/static/slider/office/7.jpg',
-            '/static/slider/office/8.jpg'
-          ]
-        },
-        {
-          title: `Для тех, кто выбирает стильные и удобные платья в cтиле Casual`,
-          desc: `Фасон: платье трапеция с подрезами Цвет: бежевый, синий Длина: выше колена Карманы: в боковых швах Платье на подкладке`,
-          gallery: [
-            '/static/slider/casual/1.jpg',
-            '/static/slider/casual/2.jpg',
-            '/static/slider/casual/3.jpg',
-            '/static/slider/casual/4.jpg',
-            '/static/slider/casual/5.jpg',
-            '/static/slider/casual/6.jpg',
-            '/static/slider/casual/7.jpg',
-            '/static/slider/casual/8.jpg'
-          ]
-        },
-        {
-          title: `Для тех, кто хочет выглядеть стильно не только в офисе, но и на вечеринках`,
-          desc: `Фасон: платье полуприлегающего силуэта Цвет: красный, черный Особенности: по спинке молния Длина: до колен Карманы: нет Платье без подкладки`,
-          gallery: [
-            '/static/slider/party/1.jpg',
-            '/static/slider/party/2.jpg',
-            '/static/slider/party/3.jpg',
-            '/static/slider/party/4.jpg',
-            '/static/slider/party/5.jpg',
-            '/static/slider/party/6.jpg',
-            '/static/slider/party/7.jpg',
-            '/static/slider/party/8.jpg'
-          ]
-        }
-      ]
+      }
     };
   },
   methods: {
@@ -105,38 +52,29 @@ export default {
     closeModal() {
       this.isActive = false;
     }
+  },
+  computed: {
+    items() {
+      return items;
+    }
   }
 };
 </script>
 
 <style scoped lang="stylus">
-.clothesBG {
+.clothesBG
   background: url('/static/cardbg1.png') center center no-repeat;
   height: 830px;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-
-  .head {
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  .head
     max-height: 15%;
-
-    h2 {
+    h2
       padding: 1rem 0;
-    }
-  }
-
-  .wrapper {
+  .wrapper
     background-image: url('/static/boxBg.png');
     min-height: 300px;
     max-width: 504px;
@@ -144,154 +82,100 @@ export default {
     margin: 0 15px;
     cursor: pointer;
     overflow: hidden;
-
-    .box {
-      -webkit-filter: grayscale(100%);
-              filter: grayscale(100%);
+    .box
+      filter: grayscale(100%);
       min-height: 300px;
       padding: 3rem 0 0 2.2rem;
-      -webkit-transition: 0.4s ease;
-      -o-transition: 0.4s ease;
       transition: 0.4s ease;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: column wrap;
-              flex-flow: column wrap;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-
-      &:hover {
-        -webkit-filter: grayscale(0);
-                filter: grayscale(0);
-        -webkit-transition: 0.4s ease;
-        -o-transition: 0.4s ease;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      .details
+        font-size 1.35rem
+      &:hover
+        filter: grayscale(0);
         transition: 0.4s ease;
-
-        .details {
-          transition: 0.2s linear;
+        .details
           color: red;
-        }
-        span {
-          transition .8s ease
+        .Price
+          transition: 0.2s linear
+          color red
+        span
           border-bottom 1px solid red
           width 100%
-        }
-      }
-
-      .details {
-        transition: 0.2s linear;
-        font-size: 1.85rem;
-        padding-bottom: 2rem;
-      }
-      span {
+      span
         border-bottom 1px solid transparent
         transition .8s ease
-      }
-    }
-
-    &:nth-child(1) {
-      .box {
+    &:nth-child(1)
+      .box
         background: url('/static/girls/1.png') right center no-repeat;
-      }
-    }
-
-    &:nth-child(2) {
-      .box {
+    &:nth-child(2)
+      .box
         background: url('/static/girls/2.png') right center no-repeat;
-      }
-    }
-
-    &:nth-child(3) {
-      .box {
+    &:nth-child(3)
+      .box
         background: url('/static/girls/3.png') right center no-repeat;
-      }
-    }
-
-    &:nth-child(4) {
-      .box {
+    &:nth-child(4)
+      .box
         background: url('/static/girls/4.png') right center no-repeat;
-      }
-    }
-
-    .text {
+    .text
       max-width: 65%;
       margin-bottom: 0;
-    }
-  }
-}
 
-@media (max-width: 1024px) {
-  .clothesBG {
+.Info
+  display flex
+  align-items center
+  height 20px
+  padding-bottom 2rem
+  .Price
+    font-size 1.5rem
+    margin-left 1.5rem
+    transition .8s ease
+
+
+@media (max-width: 1024px)
+  .clothesBG
     height: 540px;
     background-image: url('/static/1024/cardbg1024.png');
-
-    .wrapper {
+    .wrapper
       max-width: 328px;
       min-height: 195px;
       max-height: 200px;
-
-      .box {
+      .box
         min-height: 195px;
         padding: 1rem;
-
-        .text {
+        .text
           font-size: 1.2rem;
           line-height: 1.9rem;
-        }
-
-        .details {
+        .details
           font-size: 1.2rem;
-          padding-bottom: 0rem;
-        }
-      }
-
-      &:nth-child(1) {
-        .box {
+          padding-bottom: 0rem
+      &:nth-child(1)
+        .box
           background: url('/static/1024/1.png') right center no-repeat;
-        }
-      }
-
-      &:nth-child(2) {
-        .box {
+      &:nth-child(2)
+        .box
           background: url('/static/1024/2.png') right center no-repeat;
-        }
-      }
-
-      &:nth-child(3) {
-        .box {
+      &:nth-child(3)
+        .box
           background: url('/static/1024/3.png') right center no-repeat;
-        }
-      }
-
-      &:nth-child(4) {
-        .box {
+      &:nth-child(4)
+        .box
           background: url('/static/1024/4.png') right center no-repeat;
-        }
-      }
-    }
-  }
-}
+  
 
-@media (max-width: 600px) {
-  .clothesBG {
+
+@media (max-width: 600px)
+  .clothesBG
     background-image: url('/static/480/480cardbg.png');
     height: auto;
     min-height: 1000px;
     margin-top: -5px;
-
-    h2 {
+    h2
       padding: 0;
       font-size: 1.5rem;
       text-align: center;
-    }
+    .text
+      font-size: 1rem !important
 
-    .text {
-      font-size: 1rem !important;
-    }
-  }
-}
 </style>
