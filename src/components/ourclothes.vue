@@ -177,5 +177,10 @@ export default {
       text-align: center;
     .text
       font-size: 1rem !important
+  .Info
+    .Price
+      font-size 1.1rem
+      margin-left 1rem
+
 
 </style>
