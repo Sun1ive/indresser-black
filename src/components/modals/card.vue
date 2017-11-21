@@ -3,8 +3,12 @@
     <v-layout column justify-center align-center>
       <h2 class="mb-0 text-xs-center text-sm-left head">{{ currentItem.title }} </h2>
       <p class="mb-0">{{ currentItem.desc }}</p>
-      <div class="Price">{{ currentItem.price }} грн</div>
-      <button class="myBtn" @click.stop="showOfferCall">Получить консультацию и заказать</button>
+      <div class="Price">{{ currentItem.price - 100 }} грн</div>
+      <div class="Price"><s>{{ currentItem.price }} грн</s></div>
+      <div class="buttons">
+        <button class="myBtn" @click.stop="showOfferCall">Получить консультацию</button>
+        <button class="myBtn" @click.stop="showCatalog">Получить каталог</button>
+      </div>
     </v-layout>
     <v-layout justify-center>
       <h2>Топ продаж</h2>
@@ -13,9 +17,6 @@
       <v-carousel hide-controls>
         <v-carousel-item v-for="(item, i) in currentItem.gallery" :key="i" :src="item"></v-carousel-item>
       </v-carousel>
-    </v-layout>
-    <v-layout justify-center class="py-3">
-      <button class="myBtn" @click.stop="showCatalog">Получить весь каталог</button>
     </v-layout>
     <div class="close" @click.stop="closeModal"></div>
 

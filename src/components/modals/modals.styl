@@ -37,10 +37,17 @@
     padding 1rem
     font-family: Arial, Helvetica, sans-serif
 
+.buttons
+  display: flex
+  justify-content: center
+  .myBtn
+    margin: 0 .5rem
+    padding: .5rem 0
+    min-width 60%
+
 .Price
   font-size: 2rem
   color red
-  margin-bottom: 1rem
 
 .carousel
   height 700px
@@ -58,7 +65,7 @@
   padding .4rem 0
   border-radius: 6px
   font-family: 'OpenSans-Semibold', Arial, Helvetica, sans-serif
-  font-size: 1.3rem
+  font-size: 1rem
   text-transform uppercase
 
 @media (max-width 700px)
@@ -92,3 +99,10 @@
       font-size: .8rem
   .Price
     font-size: 1.4rem
+  .buttons
+    flex-direction: column
+    .myBtn
+      margin .5rem 0
+      padding: .6rem 2rem
+      &:last-child
+        margin-bottom: 2rem

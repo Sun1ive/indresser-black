@@ -30,7 +30,6 @@ export default {
       Email.send(
         `coats@indresser.com`,
         'info@indresser.com',
-        // 'sunliveua@gmail.com',
         'Перешел на каталог с dresses.indresser.com',
         `Пользователь: ${this.userData.email}
         Перешел на каталог`,
@@ -41,7 +40,7 @@ export default {
 
       if (this.userData.email !== undefined && this.userData.email !== '') {
         setTimeout(() => {
-          window.open('https://dresses.indresser.com/catalog.pdf', '_blank');
+          window.open('https://catalog.indresser.com/', '_blank');
         }, 250);
       } else {
         alert('Пожалуйста введите корректный e-mail');
