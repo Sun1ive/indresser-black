@@ -43,7 +43,15 @@
   .myBtn
     margin: 0 .5rem
     padding: .5rem 0
-    min-width 60%
+    min-width 57%
+
+.composition
+  display flex
+  justify-content: space-around
+  width 100%
+  max-width 450px
+  font-size: 1.1rem
+
 
 .Price
   font-size: 2rem
@@ -87,6 +95,18 @@
       top: 2%
     .carousel
       max-width 310px
+  .composition
+    font-size: 1rem
+    flex-direction: column
+    align-items: center
+    margin-bottom: 1rem
+  h6
+    font-size: 1.1rem
+  .buttons
+    flex-direction: column
+    .myBtn
+      margin .5rem 0
+      padding: .6rem 2rem
 
 @media (max-width 440px)
   .modal
@@ -99,6 +119,7 @@
       font-size: .8rem
   .Price
     font-size: 1.4rem
+    font-weight: bold
   .buttons
     flex-direction: column
     .myBtn

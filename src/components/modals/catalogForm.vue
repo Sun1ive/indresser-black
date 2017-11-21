@@ -60,4 +60,8 @@ export default {
 input
   margin-right: 1rem
   padding-left: 0.5rem
+
+@media (max-width: 440px)
+  input
+    margin-right 0
 </style>

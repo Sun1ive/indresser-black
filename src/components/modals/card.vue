@@ -2,9 +2,21 @@
   <v-container class="modal">
     <v-layout column justify-center align-center>
       <h2 class="mb-0 text-xs-center text-sm-left head">{{ currentItem.title }} </h2>
-      <p class="mb-0">{{ currentItem.desc }}</p>
+      <p class="mb-0" align="justify">{{ currentItem.desc }}</p>
+      <h6>Состав:</h6>
+      <div class="composition">
+        <div>
+          {{ currentItem.comp.one }}
+        </div>
+        <div>
+          {{ currentItem.comp.two }}
+        </div>
+        <div>
+          {{ currentItem.comp.three }}
+        </div>
+      </div>
       <div class="Price">{{ currentItem.price - 100 }} грн</div>
-      <div class="Price"><s>{{ currentItem.price }} грн</s></div>
+      <div class="Price white--text"><s>{{ currentItem.price }} грн</s></div>
       <div class="buttons">
         <button class="myBtn" @click.stop="showOfferCall">Получить консультацию</button>
         <button class="myBtn" @click.stop="showCatalog">Получить каталог</button>

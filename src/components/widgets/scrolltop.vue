@@ -72,5 +72,5 @@
     height 65px
     width 65px
   .visible
-    bottom 10%
+    bottom 11%
 </style>

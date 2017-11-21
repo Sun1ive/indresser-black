@@ -177,6 +177,9 @@ export default {
       text-align: center;
     .text
       font-size: 1rem !important
+    .wrapper
+      .box
+        filter none;
   .Info
     .Price
       font-size 1.1rem
